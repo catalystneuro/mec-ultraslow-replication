@@ -1,0 +1,11 @@
+# Tested with Python 3.12. Versions are the ones this analysis was run against;
+# nearby versions should work.
+pynwb>=4.0
+h5py>=3.16
+remfile>=0.4
+dandi>=0.76
+numpy>=2.0
+scipy>=1.16
+matplotlib>=3.10
+tqdm>=4.66
+python-pptx>=1.0   # only for scripts/make_slides.py

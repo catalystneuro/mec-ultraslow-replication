@@ -1,0 +1,20 @@
+{
+  "tag": "d000897_ec",
+  "title": "DANDI 000897 \u2014 MACAQUE entorhinal cortex, mental navigation",
+  "species": "Macaca mulatta",
+  "region": "EC (all probe units; electrode location not annotated)",
+  "n_units": 36,
+  "duration_min": 318.0097994444444,
+  "frac_rhythmic": 0.8333333333333334,
+  "n_rhythmic": 30,
+  "median_peak_hz": 0.0061005368472425575,
+  "pc12_var": 0.6138909208922162,
+  "pc12_null": 0.39966288924282767,
+  "pc12_z": 38.27210803201763,
+  "p_pc12": 0.004975124378109453,
+  "rotation": 0.0035723270440251574,
+  "rotation_null": 0.011382641509433964,
+  "rot_z": -1.1384174407511316,
+  "p_rotation": 0.8756218905472637,
+  "sequences": false
+}

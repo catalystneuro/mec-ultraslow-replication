@@ -1,0 +1,8 @@
+session                            units  windows  sig   score   p_session  verdict
+------------------------------------------------------------------------------------------------
+104638 / Wheel-HeadFixed             404       13    7    0.54    1.03e-06  SEQUENCES  <- POSITIVE (paper Fig. 2f)
+102335 / Wheel-HeadFixed             862       13    1    0.08    4.87e-01  none       <- POSITIVE (paper Ext. Fig. 4g)
+104638 / OpenField                   438       13    1    0.08    4.87e-01  none       <- untested condition
+102335 / OpenField                   936       13    0    0.00    1.00e+00  none       <- untested condition
+
+Requirement: BOTH wheel sessions must come out positive, or every null downstream is uninterpretable.

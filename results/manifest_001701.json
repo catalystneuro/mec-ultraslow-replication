@@ -1,0 +1,1310 @@
+{
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 129,
+    "n_mec": 36,
+    "n_v1": 82
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY02-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 137,
+    "n_mec": 44,
+    "n_v1": 82
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 192,
+    "n_mec": 74,
+    "n_v1": 98
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY04-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 195,
+    "n_mec": 78,
+    "n_v1": 93
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY05-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 177,
+    "n_mec": 77,
+    "n_v1": 83
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 201,
+    "n_mec": 81,
+    "n_v1": 103
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY07-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 197,
+    "n_mec": 70,
+    "n_v1": 112
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY08-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 214,
+    "n_mec": 83,
+    "n_v1": 113
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY09-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 259,
+    "n_mec": 107,
+    "n_v1": 117
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY10-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 327,
+    "n_mec": 131,
+    "n_v1": 161
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY11-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 213,
+    "n_mec": 105,
+    "n_v1": 89
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY12-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 247,
+    "n_mec": 119,
+    "n_v1": 101
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY13-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 196,
+    "n_mec": 85,
+    "n_v1": 92
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY14-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 247,
+    "n_mec": 94,
+    "n_v1": 133
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY15-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 219,
+    "n_mec": 84,
+    "n_v1": 120
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY16-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 285,
+    "n_mec": 119,
+    "n_v1": 146
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY17-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 285,
+    "n_mec": 114,
+    "n_v1": 149
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY18-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 276,
+    "n_mec": 101,
+    "n_v1": 156
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY19-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 282,
+    "n_mec": 90,
+    "n_v1": 175
+  },
+  "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY20-g1_behavior+ecephys.nwb": {
+    "subject": "sub-AppleBottom",
+    "n_units": 222,
+    "n_mec": 87,
+    "n_v1": 118
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 247,
+    "n_mec": 169,
+    "n_v1": 77
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY02-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 318,
+    "n_mec": 219,
+    "n_v1": 96
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 318,
+    "n_mec": 224,
+    "n_v1": 93
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY04-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 268,
+    "n_mec": 196,
+    "n_v1": 72
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY05-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 309,
+    "n_mec": 220,
+    "n_v1": 88
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 377,
+    "n_mec": 276,
+    "n_v1": 101
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY07-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 402,
+    "n_mec": 276,
+    "n_v1": 125
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY08-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 353,
+    "n_mec": 267,
+    "n_v1": 85
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY09-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 314,
+    "n_mec": 234,
+    "n_v1": 80
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY10-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 326,
+    "n_mec": 237,
+    "n_v1": 89
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY11-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 332,
+    "n_mec": 280,
+    "n_v1": 50
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY12-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 272,
+    "n_mec": 241,
+    "n_v1": 31
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY13-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 242,
+    "n_mec": 195,
+    "n_v1": 46
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY14-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 254,
+    "n_mec": 214,
+    "n_v1": 40
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY15-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 320,
+    "n_mec": 241,
+    "n_v1": 79
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY16-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 275,
+    "n_mec": 209,
+    "n_v1": 66
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY17-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 267,
+    "n_mec": 202,
+    "n_v1": 65
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY19-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 279,
+    "n_mec": 216,
+    "n_v1": 63
+  },
+  "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY20-g1_behavior+ecephys.nwb": {
+    "subject": "sub-BaggySweatpants",
+    "n_units": 270,
+    "n_mec": 205,
+    "n_v1": 65
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 341,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY02-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 349,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 377,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY05-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 580,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 419,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY07-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 487,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY08-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 504,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY09-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 391,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY10-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 500,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY11-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 403,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY12-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 446,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY13-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 393,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY14-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 547,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY15-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 522,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY16-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 467,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY17-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 408,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY18-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 270,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY19-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 488,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Curie/sub-Curie_ses-Curie-DY20-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Curie",
+    "n_units": 423,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY01-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 259,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY02-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 212,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY03-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 519,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY04-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 433,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY05-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 387,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY06-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 379,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY07-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 311,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY08-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 454,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY09-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 273,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY10-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 406,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY11-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 452,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY12-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 368,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY13-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 567,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY14-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 338,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY15-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 368,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY16-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 449,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY17-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 226,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY18-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 545,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY19-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 526,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Franklin/sub-Franklin_ses-Franklin-DY20-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Franklin",
+    "n_units": 536,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY01-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 617,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY02-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 704,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY03-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 750,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY04-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 747,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY05-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 724,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY06-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 769,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY07-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 851,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY08-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 577,
+    "n_mec": 449,
+    "n_v1": 128
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY09-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 655,
+    "n_mec": 511,
+    "n_v1": 144
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY10-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 636,
+    "n_mec": 494,
+    "n_v1": 142
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY11-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 605,
+    "n_mec": 443,
+    "n_v1": 162
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY12-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 580,
+    "n_mec": 439,
+    "n_v1": 141
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY13-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 580,
+    "n_mec": 445,
+    "n_v1": 135
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY14-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 560,
+    "n_mec": 444,
+    "n_v1": 116
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY15-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 624,
+    "n_mec": 446,
+    "n_v1": 178
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY16-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 620,
+    "n_mec": 470,
+    "n_v1": 150
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY17-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 547,
+    "n_mec": 400,
+    "n_v1": 147
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY18-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 585,
+    "n_mec": 437,
+    "n_v1": 148
+  },
+  "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY19-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Lamarr",
+    "n_units": 548,
+    "n_mec": 405,
+    "n_v1": 143
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 415,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY02-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 428,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 558,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY04-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 545,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY05-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 581,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 582,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY07-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 533,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY08-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 552,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY09-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 577,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY10-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 478,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY11-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 571,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY12-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 475,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY13-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 558,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY14-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 576,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY15-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 561,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY16-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 579,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY17-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 503,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY18-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 533,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Lovelace/sub-Lovelace_ses-Lovelace-DY19-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Lovelace",
+    "n_units": 634,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 383,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY02-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 477,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 391,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY04-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 419,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY05-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 456,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 445,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY07-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 407,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY08-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 440,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY09-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 359,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY10-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 493,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY11-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 456,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY12-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 346,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY13-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 487,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY14-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 381,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY15-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 473,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY16-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 419,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY17-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 412,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY18-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 537,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY19-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 594,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Noether/sub-Noether_ses-Noether-DY20-g1_behavior+ecephys.nwb": {
+    "subject": "sub-Noether",
+    "n_units": 314,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY01-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 487,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY02-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 504,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY03-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 532,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY04-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 619,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY05-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 512,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY06-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 513,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY07-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 545,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY08-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 547,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY09-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 528,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY10-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 519,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY11-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 499,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY13-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 548,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY14-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 593,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY15-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 586,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY16-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 530,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY17-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 470,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY18-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 650,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY19-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 597,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-Payne/sub-Payne_ses-Payne-DY20-g0_behavior+ecephys.nwb": {
+    "subject": "sub-Payne",
+    "n_units": 536,
+    "n_mec": 0,
+    "n_v1": 0
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 177,
+    "n_mec": 125,
+    "n_v1": 51
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY02-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 202,
+    "n_mec": 147,
+    "n_v1": 54
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 184,
+    "n_mec": 132,
+    "n_v1": 51
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY04-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 175,
+    "n_mec": 121,
+    "n_v1": 52
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY05-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 175,
+    "n_mec": 127,
+    "n_v1": 48
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 192,
+    "n_mec": 133,
+    "n_v1": 58
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY08-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 171,
+    "n_mec": 124,
+    "n_v1": 47
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY09-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 195,
+    "n_mec": 145,
+    "n_v1": 48
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY10-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 183,
+    "n_mec": 125,
+    "n_v1": 56
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY11-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 159,
+    "n_mec": 116,
+    "n_v1": 41
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY12-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 175,
+    "n_mec": 117,
+    "n_v1": 57
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY13-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 192,
+    "n_mec": 140,
+    "n_v1": 50
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY14-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 175,
+    "n_mec": 116,
+    "n_v1": 57
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY15-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 189,
+    "n_mec": 117,
+    "n_v1": 71
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY16-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 171,
+    "n_mec": 123,
+    "n_v1": 47
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY17-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 198,
+    "n_mec": 164,
+    "n_v1": 32
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY18-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 135,
+    "n_mec": 111,
+    "n_v1": 22
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY19-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 152,
+    "n_mec": 122,
+    "n_v1": 29
+  },
+  "sub-StickPin/sub-StickPin_ses-StickPin-DY20-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StickPin",
+    "n_units": 148,
+    "n_mec": 119,
+    "n_v1": 29
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 117,
+    "n_mec": 59,
+    "n_v1": 58
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY02-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 180,
+    "n_mec": 89,
+    "n_v1": 89
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 150,
+    "n_mec": 70,
+    "n_v1": 80
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY04-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 173,
+    "n_mec": 82,
+    "n_v1": 91
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 197,
+    "n_mec": 89,
+    "n_v1": 107
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY07-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 176,
+    "n_mec": 87,
+    "n_v1": 85
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY08-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 188,
+    "n_mec": 92,
+    "n_v1": 94
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY09-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 175,
+    "n_mec": 86,
+    "n_v1": 87
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY10-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 202,
+    "n_mec": 101,
+    "n_v1": 100
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY11-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 195,
+    "n_mec": 88,
+    "n_v1": 106
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY12-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 169,
+    "n_mec": 89,
+    "n_v1": 80
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY13-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 168,
+    "n_mec": 83,
+    "n_v1": 84
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY14-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 201,
+    "n_mec": 95,
+    "n_v1": 104
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY15-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 182,
+    "n_mec": 92,
+    "n_v1": 90
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY16-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 144,
+    "n_mec": 72,
+    "n_v1": 71
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY17-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 148,
+    "n_mec": 65,
+    "n_v1": 82
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY18-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 162,
+    "n_mec": 73,
+    "n_v1": 86
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY19-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 187,
+    "n_mec": 90,
+    "n_v1": 95
+  },
+  "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY20-g1_behavior+ecephys.nwb": {
+    "subject": "sub-StrappyReeboks",
+    "n_units": 163,
+    "n_mec": 85,
+    "n_v1": 76
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 150,
+    "n_mec": 80,
+    "n_v1": 70
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 173,
+    "n_mec": 94,
+    "n_v1": 78
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY04-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 194,
+    "n_mec": 106,
+    "n_v1": 87
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY05-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 178,
+    "n_mec": 85,
+    "n_v1": 93
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 191,
+    "n_mec": 92,
+    "n_v1": 98
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY07-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 207,
+    "n_mec": 102,
+    "n_v1": 103
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY08-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 216,
+    "n_mec": 99,
+    "n_v1": 117
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY09-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 219,
+    "n_mec": 100,
+    "n_v1": 118
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY10-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 192,
+    "n_mec": 83,
+    "n_v1": 109
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY11-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 156,
+    "n_mec": 59,
+    "n_v1": 97
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY12-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 196,
+    "n_mec": 79,
+    "n_v1": 117
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY13-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 210,
+    "n_mec": 87,
+    "n_v1": 123
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY14-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 197,
+    "n_mec": 67,
+    "n_v1": 128
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY15-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 206,
+    "n_mec": 81,
+    "n_v1": 122
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY16-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 219,
+    "n_mec": 93,
+    "n_v1": 124
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY17-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 183,
+    "n_mec": 67,
+    "n_v1": 115
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY18-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 150,
+    "n_mec": 49,
+    "n_v1": 101
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY19-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 159,
+    "n_mec": 56,
+    "n_v1": 103
+  },
+  "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY20-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopCoat",
+    "n_units": 149,
+    "n_mec": 61,
+    "n_v1": 88
+  },
+  "sub-TopHat/sub-TopHat_ses-TopHat-DY01-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopHat",
+    "n_units": 224,
+    "n_mec": 147,
+    "n_v1": 77
+  },
+  "sub-TopHat/sub-TopHat_ses-TopHat-DY02-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopHat",
+    "n_units": 207,
+    "n_mec": 130,
+    "n_v1": 76
+  },
+  "sub-TopHat/sub-TopHat_ses-TopHat-DY03-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopHat",
+    "n_units": 222,
+    "n_mec": 143,
+    "n_v1": 79
+  },
+  "sub-TopHat/sub-TopHat_ses-TopHat-DY04-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopHat",
+    "n_units": 170,
+    "n_mec": 106,
+    "n_v1": 63
+  },
+  "sub-TopHat/sub-TopHat_ses-TopHat-DY05-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopHat",
+    "n_units": 183,
+    "n_mec": 112,
+    "n_v1": 70
+  },
+  "sub-TopHat/sub-TopHat_ses-TopHat-DY06-g1_behavior+ecephys.nwb": {
+    "subject": "sub-TopHat",
+    "n_units": 194,
+    "n_mec": 112,
+    "n_v1": 82
+  }
+}

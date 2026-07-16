@@ -1,0 +1,13 @@
+scanning 218 sessions...
+  25/218
+  50/218
+  75/218
+  100/218
+  125/218
+  150/218
+  175/218
+  200/218
+
+sessions with >=20 MEC units: 114/218
+sessions with >=20 V1 units : 114/218
+subjects contributing MEC   : {'sub-AppleBottom': 20, 'sub-BaggySweatpants': 19, 'sub-Lamarr': 12, 'sub-StickPin': 19, 'sub-StrappyReeboks': 19, 'sub-TopCoat': 19, 'sub-TopHat': 6}

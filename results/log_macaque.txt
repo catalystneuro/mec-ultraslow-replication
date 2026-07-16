@@ -1,0 +1,4 @@
+mahler 0412 (p~1e-21)      pop peak=0.0051Hz (197s) | trial-onset peak=0.0112Hz | target peak=0.0081Hz
+mahler 0414                pop peak=0.0051Hz (197s) | trial-onset peak=0.0051Hz | target peak=0.0051Hz
+amadeus 0829               pop peak=0.0081Hz (123s) | trial-onset peak=0.0051Hz | target peak=0.0071Hz
+-> /Users/bdichter/dev/sandbox/moser-project/mec_ultraslow_replication/figures/macaque_task_control.png

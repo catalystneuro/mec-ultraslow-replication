@@ -1,0 +1,20 @@
+{
+  "tag": "ctrl_openfield",
+  "title": "CONTROL \u2014 original paper, open field (same units)",
+  "species": "Mus musculus",
+  "region": "MEC - Layer 2, 3, 5 (Neuropixels 2.0)",
+  "n_units": 438,
+  "duration_min": 25.5,
+  "frac_rhythmic": 0.728310502283105,
+  "n_rhythmic": 319,
+  "median_peak_hz": 0.022368635106556043,
+  "pc12_var": 0.19940282340722176,
+  "pc12_null": 0.058511740166251845,
+  "pc12_z": 206.22477380582023,
+  "p_pc12": 0.004975124378109453,
+  "rotation": 0.02699309478970496,
+  "rotation_null": 0.07986817325800377,
+  "rot_z": -1.3774022275184779,
+  "p_rotation": 0.8955223880597015,
+  "sequences": false
+}

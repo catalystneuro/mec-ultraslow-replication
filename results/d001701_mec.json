@@ -1,0 +1,20 @@
+{
+  "tag": "d001701_mec",
+  "title": "DANDI 001701 \u2014 mouse MEC, X-maze",
+  "species": "Mus musculus",
+  "region": "MEC (Entorhinal area medial part, dorsal zone)",
+  "n_units": 43,
+  "duration_min": 40.638600357754626,
+  "frac_rhythmic": 0.7441860465116279,
+  "n_rhythmic": 32,
+  "median_peak_hz": 0.0350780868716447,
+  "pc12_var": 0.29899336705410395,
+  "pc12_null": 0.12386757021493557,
+  "pc12_z": 40.31251967668266,
+  "p_pc12": 0.004975124378109453,
+  "rotation": 0.06419850334777472,
+  "rotation_null": 0.04371406065380071,
+  "rot_z": 0.6671206221790625,
+  "p_rotation": 0.24875621890547264,
+  "sequences": false
+}

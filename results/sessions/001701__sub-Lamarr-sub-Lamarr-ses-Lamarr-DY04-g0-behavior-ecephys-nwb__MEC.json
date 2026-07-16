@@ -1,0 +1,8 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY04-g0_behavior+ecephys.nwb",
+  "region_select": "MEC",
+  "status": "error",
+  "error": "ValueError: min() iterable argument is empty",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/bdichter/dev/sandbox/moser-project/mec_ultraslow_replication/scripts/07_run_all_sessions.py\", line 159, in main\n    sess = loader()\n           ^^^^^^^^\n  File \"/Users/bdichter/dev/sandbox/moser-project/mec_ultraslow_replication/scripts/07_run_all_sessions.py\", line 133, in <lambda>\n    return [(p, r, (lambda pp=p, rr=r: loaders.load(dsid, pp, region_select=rr)))\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/bdichter/dev/sandbox/moser-project/mec_ultraslow_replication/scripts/loaders.py\", line 222, in load\n    t0, t1 = _span(spike_times)\n             ^^^^^^^^^^^^^^^^^^\n  File \"/Users/bdichter/dev/sandbox/moser-project/mec_ultraslow_replication/scripts/loaders.py\", line 125, in _span\n    return float(min(firsts)), float(max(lasts))\n                 ^^^^^^^^^^^\nValueError: min() iterable argument is empty\n"
+}

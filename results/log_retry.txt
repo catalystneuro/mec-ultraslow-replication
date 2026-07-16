@@ -1,0 +1,178 @@
+
+##########################################################################################
+# 001701: 436 session x region jobs
+##########################################################################################
+[1/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY01-g1-behavior  (cached)
+[2/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY01-g1-behavior  (cached)
+[3/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY02-g1-behavior  (cached)
+[4/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY02-g1-behavior  (cached)
+[5/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY03-g1-behavior  (cached)
+[6/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY03-g1-behavior  (cached)
+[7/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY04-g1-behavior  (cached)
+[8/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY04-g1-behavior  (cached)
+[9/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY05-g1-behavior  (cached)
+[10/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY05-g1-behavior  (cached)
+[11/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY06-g1-behavior  (cached)
+[12/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY06-g1-behavior  (cached)
+[13/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY07-g1-behavior  (cached)
+[14/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY07-g1-behavior  (cached)
+[15/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY08-g1-behavior  (cached)
+[16/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY08-g1-behavior  (cached)
+[17/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY09-g1-behavior  (cached)
+[18/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY09-g1-behavior  (cached)
+[19/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY10-g1-behavior  (cached)
+[20/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY10-g1-behavior  (cached)
+[21/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY11-g1-behavior  (cached)
+[22/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY11-g1-behavior  (cached)
+[23/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY12-g1-behavior  (cached)
+[24/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY12-g1-behavior  (cached)
+[25/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY13-g1-behavior  (cached)
+[26/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY13-g1-behavior  (cached)
+[27/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY14-g1-behavior  (cached)
+[28/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY14-g1-behavior  (cached)
+[29/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY15-g1-behavior  (cached)
+[30/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY15-g1-behavior  (cached)
+[31/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY16-g1-behavior  (cached)
+[32/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY16-g1-behavior  (cached)
+[33/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY17-g1-behavior  (cached)
+[34/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY17-g1-behavior  (cached)
+[35/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY18-g1-behavior  (cached)
+[36/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY18-g1-behavior  (cached)
+[37/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY19-g1-behavior  (cached)
+[38/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY19-g1-behavior  (cached)
+[39/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY20-g1-behavior  (cached)
+[40/436] 001701__sub-AppleBottom-sub-AppleBottom-ses-AppleBottom-DY20-g1-behavior  (cached)
+[41/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY01  (cached)
+[42/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY01  (cached)
+[43/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY02  (cached)
+[44/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY02  (cached)
+[45/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY03  (cached)
+[46/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY03  (cached)
+[47/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY04  (cached)
+[48/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY04  (cached)
+[49/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY05  (cached)
+[50/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY05  (cached)
+[51/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY06  (cached)
+[52/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY06  (cached)
+[53/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY07  (cached)
+[54/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY07  (cached)
+[55/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY08  (cached)
+[56/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY08  (cached)
+[57/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY09  (cached)
+[58/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY09  (cached)
+[59/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY10  (cached)
+[60/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY10  (cached)
+[61/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY11  (cached)
+[62/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY11  (cached)
+[63/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY12  (cached)
+[64/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY12  (cached)
+[65/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY13  (cached)
+[66/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY13  (cached)
+[67/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY14  (cached)
+[68/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY14  (cached)
+[69/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY15  (cached)
+[70/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY15  (cached)
+[71/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY16  (cached)
+[72/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY16  (cached)
+[73/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY17  (cached)
+[74/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY17  (cached)
+[75/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY19  (cached)
+[76/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY19  (cached)
+[77/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY20  (cached)
+[78/436] 001701__sub-BaggySweatpants-sub-BaggySweatpants-ses-BaggySweatpants-DY20  (cached)
+[79/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY01-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[80/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY01-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [0s]
+[81/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY02-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[82/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY02-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[83/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY03-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[84/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY03-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[85/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY05-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[86/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY05-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[87/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY06-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[88/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY06-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[89/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY07-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[90/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY07-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[91/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY08-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[92/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY08-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[93/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY09-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[94/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY09-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [0s]
+[95/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY10-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[96/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY10-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [0s]
+[97/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY11-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[98/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY11-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [0s]
+[99/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY12-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[100/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY12-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [0s]
+[101/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY13-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[102/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY13-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [0s]
+[103/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY14-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[104/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY14-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[105/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY15-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[106/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY15-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[107/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY16-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[108/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY16-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[109/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY17-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[110/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY17-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[111/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY18-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[112/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY18-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [0s]
+[113/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY19-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[114/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY19-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[115/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY20-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[116/436] 001701__sub-Curie-sub-Curie-ses-Curie-DY20-g1-behavior-eceph ERROR ValueError: min() iterable argument is empty  [1s]
+[117/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY01-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[118/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY01-g0-behav ERROR ValueError: min() iterable argument is empty  [0s]
+[119/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY02-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[120/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY02-g0-behav ERROR ValueError: min() iterable argument is empty  [0s]
+[121/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY03-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[122/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY03-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[123/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY04-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[124/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY04-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[125/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY05-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[126/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY05-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[127/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY06-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[128/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY06-g0-behav ERROR ValueError: min() iterable argument is empty  [2s]
+[129/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY07-g0-behav ERROR ValueError: min() iterable argument is empty  [2s]
+[130/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY07-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[131/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY08-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[132/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY08-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[133/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY09-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[134/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY09-g0-behav ERROR ValueError: min() iterable argument is empty  [0s]
+[135/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY10-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[136/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY10-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[137/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY11-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[138/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY11-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[139/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY12-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[140/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY12-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[141/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY13-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[142/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY13-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[143/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY14-g0-behav ERROR ValueError: min() iterable argument is empty  [0s]
+[144/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY14-g0-behav ERROR ValueError: min() iterable argument is empty  [0s]
+[145/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY15-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[146/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY15-g0-behav ERROR ValueError: min() iterable argument is empty  [0s]
+[147/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY16-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[148/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY16-g0-behav ERROR ValueError: min() iterable argument is empty  [0s]
+[149/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY17-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[150/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY17-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[151/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY18-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[152/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY18-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[153/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY19-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[154/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY19-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[155/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY20-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[156/436] 001701__sub-Franklin-sub-Franklin-ses-Franklin-DY20-g0-behav ERROR ValueError: min() iterable argument is empty  [1s]
+[157/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY01-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[158/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY01-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[159/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY02-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[160/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY02-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[161/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY03-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[162/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY03-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[163/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY04-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[164/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY04-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[165/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY05-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[166/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY05-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[167/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY06-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[168/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY06-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[169/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY07-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[170/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY07-g0-behavior-ec ERROR ValueError: min() iterable argument is empty  [1s]
+[171/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY08-g0-behavior-ec units=215  19.4min rhythmic= 52% rot_z= -4.0 seq=no   [29s]
+[172/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY08-g0-behavior-ec units= 77  19.4min rhythmic= 47% rot_z= -0.9 seq=no   [11s]
+[173/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY09-g0-behavior-ec units=220  16.7min rhythmic= 52% rot_z=-32.8 seq=no   [31s]
+[174/436] 001701__sub-Lamarr-sub-Lamarr-ses-Lamarr-DY09-g0-behavior-ec units= 87  16.7min rhythmic= 49% rot_z= -8.6 seq=no   [11s]

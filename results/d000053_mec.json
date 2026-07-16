@@ -1,0 +1,20 @@
+{
+  "tag": "d000053_mec",
+  "title": "DANDI 000053 \u2014 mouse MEC, VR straight track",
+  "species": "Mus musculus",
+  "region": "MEC (Neuropixels, targeted; location not annotated)",
+  "n_units": 74,
+  "duration_min": 43.77695166666667,
+  "frac_rhythmic": 0.9054054054054054,
+  "n_rhythmic": 67,
+  "median_peak_hz": 0.08439075972018871,
+  "pc12_var": 0.3182560472221818,
+  "pc12_null": 0.19872376113063517,
+  "pc12_z": 34.942302403003154,
+  "p_pc12": 0.004975124378109453,
+  "rotation": 0.01608187134502924,
+  "rotation_null": 0.0371345029239766,
+  "rot_z": -1.1048114597222571,
+  "p_rotation": 0.8557213930348259,
+  "sequences": false
+}

@@ -1,0 +1,20 @@
+{
+  "tag": "d001701_v1",
+  "title": "DANDI 001701 \u2014 visual cortex, SAME session (region control)",
+  "species": "Mus musculus",
+  "region": "Visual cortex (V1 + posterolateral)",
+  "n_units": 71,
+  "duration_min": 40.63861591331517,
+  "frac_rhythmic": 0.704225352112676,
+  "n_rhythmic": 50,
+  "median_peak_hz": 0.015759720188709938,
+  "pc12_var": 0.34282632549164005,
+  "pc12_null": 0.10128094074165336,
+  "pc12_z": 73.25415771880702,
+  "p_pc12": 0.004975124378109453,
+  "rotation": 0.1981094919259551,
+  "rotation_null": 0.03512800315084679,
+  "rot_z": 5.840613538430065,
+  "p_rotation": 0.004975124378109453,
+  "sequences": true
+}

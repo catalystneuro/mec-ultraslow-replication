@@ -1,0 +1,20 @@
+{
+  "tag": "ctrl_wheel",
+  "title": "POSITIVE CONTROL \u2014 original paper, wheel in darkness",
+  "species": "Mus musculus",
+  "region": "MEC - Layer 2, 3, 5 (Neuropixels 2.0)",
+  "n_units": 404,
+  "duration_min": 25.666666666666668,
+  "frac_rhythmic": 0.6386138613861386,
+  "n_rhythmic": 258,
+  "median_peak_hz": 0.025418903530177322,
+  "pc12_var": 0.3125648126664901,
+  "pc12_null": 0.08039670315508016,
+  "pc12_z": 331.9067985524105,
+  "p_pc12": 0.004975124378109453,
+  "rotation": 0.13591022443890274,
+  "rotation_null": 0.0448067331670823,
+  "rot_z": 3.4122382862443503,
+  "p_rotation": 0.009950248756218905,
+  "sequences": true
+}

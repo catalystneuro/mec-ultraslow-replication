@@ -1,0 +1,18 @@
+# Streamed NWB data cache (5+ GB; regenerated on demand via remfile)
+cache/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# Generated slide deck (regenerate with scripts/make_slides.py)
+*.pptx
+
+# Office lock/temp files
+~$*
