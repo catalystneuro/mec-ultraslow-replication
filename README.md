@@ -45,8 +45,67 @@ the population sequence test discriminates. Our analysis reproduces that logic.
 | **DANDI 000897** (Neupane/Fiete/Jazayeri) | **macaque** EC | 59 | 318 min | mental navigation — cross-species |
 | **DANDI 000552** (Huszár et al.) | mouse **CA1** | 102–221 | 39–148 min | **task-free rest** — region control in the one condition the archive can supply |
 
-Screened and rejected: **000582** (only 3–5 units/session), **000638** (190-min
-sessions but too few MEC units), **000943** (raw ecephys only — no spike sorting).
+### Screened and rejected
+
+From a scan of **all 875 dandisets** (metadata for every dandiset, then streaming
+`intervals`/`epochs`/`units`/`electrodes` for every plausible candidate). Two
+findings explain most of the rejections.
+
+**The 17.6-minute floor decides almost everything.** The paper estimates PSDs with
+Welch, Hamming windows of **17.6 min** (8,192 bins × 129 ms) at 50% overlap, noting
+that "a large window was needed to identify oscillation frequencies ≪0.1 Hz". A
+single analysis window therefore needs ≥17.6 min of *continuous* recording in one
+condition. Public data is almost always chopped finer than that by task structure,
+and the datasets that do offer long blocks usually lack sorted units covering them.
+
+**The condition is never in the metadata.** Of all 875 dandisets, exactly **3**
+mention darkness at all and none are relevant; **zero** mention "ultraslow",
+"infraslow" or "slow oscillation" anywhere. Where a rest or dark block exists it is
+discoverable only by streaming the file, and often is not labelled even there.
+
+| dandiset | what it has | why rejected |
+|---|---|---|
+| **000582** (Sargolini) | rat MEC, open field | 3–5 units/session |
+| **000638** (Shuman) | mouse MEC+HPC, head-fixed VR, up to 158 MEC units, 90–187 min | no `epochs`/`intervals` table at all, so no rest or dark block is identifiable; screen on throughout; 22/33 sessions are pilocarpine-epileptic; control-session MEC median only 55 units |
+| **000943** (Clark & Nolan) | mouse MEC tetrodes | raw ecephys only, no spike sorting |
+| **000409** (IBL Brain Wide Map) | 459 sessions; 19 with ENTm | 639 good MEC units archive-wide (ENTm = 0.49% of electrodes); the `spontaneousActivity` block is **exactly 600 s (10.0 min)** by protocol, so **no** session can reach 17.6 min |
+| **000690** (Openscope Vision2Hippocampus) | **the best MEC coverage on DANDI**: 7,396 MEC units, 11/25 sessions | no darkness at all: stimuli tile t=247–7488 s with no gap >30 s. The 2 sessions with a `spontaneous` table have corrupted intervals (`stop_time[i] == start_time[i-1]`, totalling −7,044 s) and no ENT anyway. **Retained for a different test** — see "Regions connected to MEC" |
+| **000022** (Allen Visual Coding, FC) | a genuine **30.04-min contiguous** spontaneous block in 26/26 sessions — the only dataset that clears the temporal bar outright | zero ENT units (SUB/ProS/POST only) |
+| **000021 / 000713** (Allen) | large Neuropixels panels | zero ENT; spontaneous blocks fragmented, longest single block 5.0 / 4.8 min |
+| **000939** (Duszkiewicz/Peyrache) | postsubiculum; `home_cage` epochs 45–100 min; 42–185 units | postsubiculum abuts parasubiculum, the paper's *own* negative control, so a null is the expected and uninformative result. Separately, 9/31 sessions have broken sleep scoring: bouts starting after the recording ends, and NREM scored during open-field running (one session at 100%) |
+| **000056** (Peyrache/Buzsáki) | AD thalamus + postsubiculum, abundant sleep (NREM bouts to 28 min) | `electrodes.location` is `unknown` for every electrode in every session — AD and PoSub cannot be separated from the file; 16–292 units, only 1 session ≥100 |
+| **000987** (Peyrache) | RSC, 5.3 h sessions, scored SWS, UP/DOWN states | 50–71 units, far short of a population test |
+| **001695** (Gonzalez/Vöröslakos) | best unit yield of its group (110–541); homecage rest | no entorhinal coverage; `electrodes.location` is a uniform `CA1` placeholder for all 384 channels (true region only in `units.cell_area`) |
+| **001703** (lateral EC) | the only LEC dataset on DANDI | **empty — 0 files** |
+| **000574 / 000575** (human MTL) | human single units incl. MTL | 28 units/session over 21.5 min; microwire yields cannot support a population test |
+| **000230** (Jacobsen et al.) | the only Moser-lab deposit on DANDI | rabies tracing + photostimulation, 9 files, 2 subjects. Not imaging, not relevant |
+| **000059** (Petersen & Buzsáki) | medial septum **cooling**, graded 37.8→19.9 °C — a real causal handle | longest continuous cooled block is **735 s (12.25 min)**; the whole temperature-instrumented recording is 26.1 min; nothing reaches 17.6 min. Also hippocampus not MEC, `electrodes.location` `unknown`, trials tile the session, and units tables include noise clusters (one subject lists 1,114 rows of which 40 are `good`) |
+| **001375** (Septum GABA DREADDs) | septal chemogenetics | 3-file pilot, 2 mice; VR laps tile the session (no task-free time); raw only |
+| **001634** (Bray/Frank, MS optogenetics) | **ten task-free rest epochs of 17.2–33.4 min** ("animal rests in a small empty box", stimulation off) — the best-structured rest data found anywhere; ~1,110 units/session | **the units cover only the `lineartrack` epochs; every one of the ten rest epochs has 0 units.** Units are stored Spyglass-style, one per file across 434 files, so the main session file reports `units: False`. Using the rest blocks means sorting 242 GB/session |
+| **Frank lab** (000115, 001836, 000629, 001280, 000410, 001566, 000065) | cleanly labelled rest epochs (000115 `02_r1` = 90.3 min; 001836 `01_Seq2Sleep1` = 31.9 min) | **no `units` table in any file** — raw e-series + behavior only |
+
+#### Two bugs in this screen, recorded so they are not repeated
+
+1. **Abbreviations defeat keyword search.** 001634 never spells out "medial septum";
+   its description says only "PV+ neurons within the **MS**". A regex on the
+   spelled-out form misses the best septum dataset on the archive. The inverse also
+   bites: matching `mec` as a substring hits "**mec**hanical" and "**mec**hanism".
+2. **Dandiset metadata systematically understates content.** 000690's description
+   never mentions entorhinal cortex, yet it has the archive's best MEC coverage.
+   000552's epochs table carries only start/stop times, so its 160-min task-free
+   blocks are invisible unless trial coverage is checked empirically. Any screen
+   that reads descriptions instead of streaming files will be wrong in both
+   directions.
+
+#### The pattern behind the rejections
+
+Derived data covers what the original paper analyzed, not what a reuser needs.
+001634 sorted the running epochs and left ten ideal rest epochs unsorted; the Frank
+lab sets deposit no units at all; 000053's lightweight companion files exist only
+for the non-darkness sessions. The raw data is there in every case. For an archive,
+this argues for sorting whole sessions rather than analyzed intervals, and for
+making the epoch coverage of derived data discoverable without streaming 434 files
+to find out.
 
 **000552 buys the condition by giving up the region.** Every entorhinal dataset on
 DANDI runs a task from start to finish, so none can be asked the paper's question
@@ -262,6 +321,56 @@ missed. The macaque has few units per session (25–64) and a trial-structured t
 
 Depositing the EBRAINS wheel data on DANDI would be valuable — it is the only
 public recording in the condition where the effect is known to exist.
+
+## Regions connected to MEC: where to look next, and what data exists
+
+The paper's own model splits the phenomenon in two, and that split is testable
+across connected regions. The **oscillation** is proposed to be global and
+ascending — "consistent with a role for ascending neuromodulatory
+arousal-associated brain-stem circuits" — while the **sequence** is proposed to be
+MEC-local — "pointing to MEC as having unique network mechanisms for sequence
+formation". The prediction is a dissociation: other targets of the same ascending
+drive should show the oscillation *without* the sequence.
+
+Ultraslow oscillations are, by the paper's own citations, reported nearly
+everywhere already: hippocampus (Penttonen 1999, 0.025 Hz), basal ganglia (Ruskin
+1999), **human entorhinal cortex** (Aghajan, Kreiman & Fried 2023 — minute-scale
+periodicity, an independent claim in the same region), cerebral cortex (Aladjalova
+1957), monkey visual cortex (Leopold 2003), thalamocortical sleep (Lecci 2017),
+pupil (Blasiak 2013) and vasculature (Drew 2020). That ubiquity is the point: it is
+why single-cell rhythmicity cannot be the criterion, and why our CA1-at-rest result
+(83% rhythmic, 0/6 sequences) fits the paper rather than challenging it.
+
+| region | why it is a candidate | public data |
+|---|---|---|
+| **Lateral entorhinal cortex** | the strongest untested candidate: adjacent and reciprocally connected, and the paper itself invokes "slowly drifting neural population activity in lateral entorhinal cortex" as a related slow code. The paper recorded MEC and PaS but **never LEC** | **none** — 001703 is empty (0 files) |
+| **Presubiculum** | HD input to MEC layer III. Parasubiculum was the paper's negative control; presubiculum is untested | 000939 is postsubiculum (dorsal presubiculum), but it abuts the paper's own PaS control, so a null there is expected rather than informative |
+| **Medial septum / diagonal band** | the theta pacemaker and a major MEC input — the obvious candidate for a *pacing* signal, and the only way to ask whether the rhythm is imposed rather than intrinsic | 000059, 001375, 001634 — all rejected above. None usable as deposited |
+| **Brainstem neuromodulatory** (locus coeruleus, dorsal raphe, VTA, PPT/LDT) | the paper's own proposed source of the oscillation | no in vivo population recordings on DANDI |
+| **AD thalamus / head-direction ring** | a ring attractor that sweeps during sleep. Valuable precisely because HD drift is a *random walk, not periodic* — it would dissociate "sequence" from "oscillation" | 000056, rejected above (regions inseparable, unit counts too low) |
+| **Human entorhinal cortex** | Aghajan et al. report the same phenomenon in human EC. Note their claim is single-cell periodicity, which this repo shows is non-specific — so it is a candidate for re-analysis with a population test | 000574/000575: 28 units/session over 21.5 min, too few |
+| **Arousal / pupil** (not a region — the confound) | the paper concedes arousal as the alternative explanation and has **no pupil measurement anywhere** | **000690 — the one live option** |
+
+### The orphaned control: arousal
+
+The paper names its own main alternative explanation and cannot test it. It has no
+pupil, no vascular, and no independent arousal measure, while its cited references
+include infraslow pupil oscillation (Blasiak 2013) and vascular contributions to
+ultra-slow signals (Drew 2020). 0.006–0.008 Hz sits squarely in the range of
+arousal and vasomotion fluctuations.
+
+**000690 can run that control.** It has EyeTracking and running speed alongside
+7,396 MEC units across 11 sessions — the archive's best MEC coverage. Sequences
+cannot be tested there (the screen never goes dark), but sequences are not what the
+arousal hypothesis is about: the **single-cell oscillation** is. If MEC's ultraslow
+rhythmicity locks to pupil, that supports the ascending-arousal account of the
+oscillation and leaves MEC-specific *sequence formation* as the residual claim. If
+it does not lock, the oscillation is more intrinsic than the authors themselves
+guessed.
+
+It also inverts the constraint that defeated everything else in the screen: in every
+other dataset continuous stimulation was the confound, whereas here the stimulus-
+driven arousal signal is the measurement.
 
 ### A methods bug worth flagging for anyone reusing this
 
