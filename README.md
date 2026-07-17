@@ -433,6 +433,24 @@ wheel mice"; under the independent test that is 1/2. The overlapping numbers are
 as the headline only to report the replication *as the original pipeline computes it*;
 the independent column is the statistically defensible one.
 
+**Is 102335 "really" oscillatory, by the paper's own method? Unadjudicable on public
+code.** The repo's windowed-rotation test is not the paper's classifier. The paper
+uses an **oscillation score** — a whole-session population-phase PSD gate, plus a
+τ–d joint-distribution score over *concatenated sequences* — and by that method it
+classifies both Neuropixels mice as oscillatory. We tried to port it to check 102335
+directly, and could not: the scoring function (`get_oscillation_score_npx_b`) is **not
+in the authors' released code**, and a good-faith reconstruction from the Methods
+fails to validate on the *known-positive* mouse 104638, so it cannot be trusted on
+102335. The one fully-specified component (the population-phase PSD peak) actually
+shows a **cleaner** ultraslow peak for 102335 than for 104638 — if anything favoring
+the paper. So the repo's rotation test finding no sequence in 102335 is a **detector
+difference from the paper's method, not evidence against the paper**; whether 102335
+is genuinely oscillatory is unresolved on public artifacts. This is the same
+computational-reproducibility gap flagged in
+[the methods-bug note](#a-methods-bug-worth-flagging-for-anyone-reusing-this): the
+authors' MATLAB cannot be run as published, and now the specific positive-control
+classification cannot be independently recomputed either.
+
 ## Where else to look
 
 Candidate regions connected to MEC, and what data exists for each, are tabulated in
