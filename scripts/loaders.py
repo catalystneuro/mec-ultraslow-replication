@@ -103,6 +103,143 @@ def load_ebrains(mouse, task, min_rate=0.5, trim_start_s=300.0, quality=("good",
                    description=task)
 
 
+# 000690 sessions with medial entorhinal coverage, from a scan of all 25 sessions'
+# electrodes tables (scan_000690_regions.py). All 11 also carry visual cortex on the
+# same probes; only 4 carry parasubiculum, and thinly.
+OPENSCOPE_MEC_SESSIONS = [
+    "sub-695762/sub-695762_ses-1317448357.nwb",   # ENTm=348 PAR=77  VIS=304
+    "sub-695763/sub-695763_ses-1317661297.nwb",   # ENTm=268 PAR=0   VIS=363
+    "sub-695764/sub-695764_ses-1311204385.nwb",   # ENTm=266 PAR=0   VIS=348
+    "sub-699321/sub-699321_ses-1312636156.nwb",   # ENTm=379 PAR=10  VIS=256
+    "sub-699322/sub-699322_ses-1317198704.nwb",   # ENTm=57  PAR=0   VIS=207
+    "sub-702134/sub-702134_ses-1324803287.nwb",   # ENTm=411 PAR=15  VIS=329
+    "sub-714612/sub-714612_ses-1325995398.nwb",   # ENTm=360 PAR=10  VIS=289
+    "sub-714615/sub-714615_ses-1325748772.nwb",   # ENTm=114 PAR=0   VIS=260
+    "sub-716465/sub-716465_ses-1330689294.nwb",   # ENTm=99  PAR=0   VIS=276
+    "sub-717437/sub-717437_ses-1333971345.nwb",   # ENTm=250 PAR=0   VIS=352
+    "sub-719667/sub-719667_ses-1333741475.nwb",   # ENTm=343 PAR=33  VIS=298
+]
+
+
+def load_000690(asset_path, region_select="MEC", min_rate=0.5, trim_start_s=300.0,
+                quality=("good",)):
+    """Allen OpenScope Vision2Hippocampus: the best MEC coverage on DANDI.
+
+    Why it is in the panel. A single session carries up to 726 good MEC units --
+    nearly double the paper's own Neuropixels sessions (404 and 273) -- AND, on the
+    same probes at the same moment, the paper's two negative-control regions:
+    parasubiculum (PAR) and visual cortex (VIS). It therefore reproduces the design
+    of the paper's Fig. 5 (MEC 15/27, PaS 0/25, VIS 0/19) WITHIN a session, whereas
+    the original compared across different mice and days.
+
+    That within-session structure is what makes it worth having despite the
+    condition being wrong. The recurring failure mode in this panel is that apparent
+    sequences turn out to be behavioural or task structure (V1's lap cycle in 001701,
+    task-engagement blocks in the macaque). Here the stimulus is identical across
+    simultaneously recorded regions by construction, so a MEC-vs-VIS contrast cannot
+    be manufactured by stimulus block structure: if it could, VIS would show it at
+    least as strongly.
+
+    What it CANNOT do: test the paper's condition. There is no darkness and no
+    task-free block -- stimuli tile t=247-7488 s with no gap >30 s. So an absolute
+    result here needs the same skepticism applied to V1 and the macaque, and a null
+    is ambiguous between "sequences reset under sensory drive" (the authors' own
+    speculation) and "no effect". The RELATIVE, within-session region contrast is
+    the robust part.
+
+    Units map to regions via peak_channel_id -> electrodes.id -> location, using
+    Allen CCF acronyms (ENTm* = medial entorhinal, PAR = parasubiculum, VIS* = any
+    visual area). Only 'good' units are kept, matching the EBRAINS control loader.
+    """
+    io, nwb = _open("000690", asset_path)
+
+    el = nwb.electrodes.to_dataframe()
+    loc_by_id = {int(i): str(l) for i, l in zip(el.index, el["location"])}
+
+    def is_region(s):
+        s = s.strip()
+        if region_select == "MEC":
+            return s.startswith("ENTm")          # medial only; excludes ENTl
+        if region_select == "PaS":
+            return s.startswith("PAR")
+        if region_select == "V1":
+            return s.startswith("VIS")
+        return False
+
+    units = nwb.units
+    pk = np.asarray(units["peak_channel_id"][:])
+    ulocs = np.array([loc_by_id.get(int(x), "?") for x in pk])
+    qual = (np.asarray(units["quality"][:], dtype=str)
+            if "quality" in units.colnames else np.array(["good"] * len(units)))
+
+    keep = [i for i in range(len(units))
+            if is_region(ulocs[i]) and qual[i] in quality]
+
+    spike_times = [np.asarray(units["spike_times"][i]) for i in keep]
+    unit_ids = np.array(keep)
+    if not spike_times:
+        io.close()
+        raise ValueError(f"no {region_select} units in {asset_path}")
+
+    t0, t1 = _span(spike_times)
+    t0 += trim_start_s
+    spike_times = [s[(s >= t0) & (s <= t1)] for s in spike_times]
+    spike_times, unit_ids = _filter_rate(spike_times, unit_ids, t0, t1, min_rate)
+
+    subject = nwb.subject.subject_id if nwb.subject else "?"
+    io.close()
+    region = {"MEC": "MEC (ENTm, Allen CCF)",
+              "PaS": "Parasubiculum (PAR)",
+              "V1": "Visual cortex (VIS*)"}[region_select]
+    return Session(dandiset="000690", asset_path=asset_path, subject=subject,
+                   species="Mus musculus", region=region,
+                   spike_times=spike_times, unit_ids=unit_ids, t0=t0, t1=t1,
+                   description="passive visual stimulation, head-fixed (no darkness)")
+
+
+def load_000690_arousal(asset_path):
+    """Pupil area and running speed for a 000690 session, from its `_image.nwb`.
+
+    This is the control the original paper concedes it cannot run. The paper
+    attributes the single-cell oscillation to "ascending neuromodulatory
+    arousal-associated brain-stem circuits" and cites infraslow PUPIL oscillation
+    (Blasiak 2013) and vascular contributions (Drew 2020) -- but has no pupil,
+    vascular or arousal measure anywhere, and 0.006-0.008 Hz sits squarely in the
+    arousal/vasomotion range.
+
+    Returns (t_pupil, pupil_area, t_run, running_speed); any element may be None.
+    """
+    img = asset_path.replace(".nwb", "_image.nwb")
+    io, nwb = _open("000690", img)
+    tp = pupil = tr = run = None
+
+    eye = nwb.acquisition.get("EyeTracking")
+    if eye is not None:
+        # EllipseSeries: prefer the pupil ellipse's area
+        ts = None
+        for name in ("pupil_tracking", "eye_tracking"):
+            ts = getattr(eye, name, None) or (eye.spatial_series.get(name)
+                                              if hasattr(eye, "spatial_series") else None)
+            if ts is not None:
+                break
+        if ts is not None:
+            area = getattr(ts, "area", None)
+            pupil = np.asarray(area[:]) if area is not None else np.asarray(ts.data[:])
+            if pupil.ndim > 1:
+                pupil = pupil[:, 0]
+            tp = np.asarray(ts.timestamps[:]) if ts.timestamps is not None else None
+
+    rp = nwb.processing.get("running")
+    if rp is not None and "running_speed" in rp.data_interfaces:
+        rs = rp["running_speed"]
+        run = np.asarray(rs.data[:]).squeeze()
+        tr = (np.asarray(rs.timestamps[:]) if rs.timestamps is not None
+              else rs.starting_time + np.arange(len(run)) / rs.rate)
+
+    io.close()
+    return tp, pupil, tr, run
+
+
 def load_000552(asset_path, state="Awake", min_rate=0.5, trim_start_s=300.0):
     """Hippocampal CA1 during long TASK-FREE rest (Huszar et al., dandiset 000552).
 
