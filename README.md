@@ -43,9 +43,22 @@ the population sequence test discriminates. Our analysis reproduces that logic.
 | **DANDI 000053** (Mallory/Giocomo) | mouse MEC, Neuropixels | 74–408 | 26–44 min | VR straight track, rewards |
 | **DANDI 001701** (Aery Jones 2026) | mouse MEC dorsal | ~150 | 40 min | X-maze navigation |
 | **DANDI 000897** (Neupane/Fiete/Jazayeri) | **macaque** EC | 59 | 318 min | mental navigation — cross-species |
+| **DANDI 000552** (Huszár et al.) | mouse **CA1** | 102–221 | 39–148 min | **task-free rest** — region control in the one condition the archive can supply |
 
 Screened and rejected: **000582** (only 3–5 units/session), **000638** (190-min
 sessions but too few MEC units), **000943** (raw ecephys only — no spike sorting).
+
+**000552 buys the condition by giving up the region.** Every entorhinal dataset on
+DANDI runs a task from start to finish, so none can be asked the paper's question
+in the paper's condition (no task, no rewards, minimal sensory drive). 000552 is
+the archive's best approximation: multi-hour sessions where unlabelled PRE/POST
+home-cage blocks bracket a maze epoch. 24 of 64 sessions have ≥100 units and ≥30
+min of *continuous* task-free awake rest. The epochs table carries only
+start/stop times, so task-free blocks are identified empirically as those
+containing no trials, and brain state comes from `processing/behavior/SleepStates`.
+Bouts are never concatenated — that would destroy the phase continuity a
+minute-scale sequence lives in. Caveats: `electrodes.location` is `unknown`
+throughout (CA1 comes from the publication), and darkness is undocumented.
 
 The EBRAINS **wheel** epoch is the methodological keystone: a detector that
 cannot fire there cannot be trusted to report a null anywhere else.
@@ -128,6 +141,7 @@ strongly session-variable. We compute the same, using the windowed sequence test
 | **DANDI 001701** mouse MEC | X-maze | **3/114 = 3%** |
 | DANDI 001701 visual cortex | region control | 9/110 = 8% *(confound)* |
 | DANDI 000897 macaque EC | mental navigation | 8/15 = 53% *(confound)* |
+| **DANDI 000552** mouse CA1 | **task-free rest** | **0/6 = 0%** |
 
 **The pipeline reproduces the original effect.** On the paper's own
 wheel-in-darkness data it recovers ultraslow rhythmicity in 64% of MEC cells
@@ -165,6 +179,41 @@ each nailed by a dedicated control:
   the trials), and the PC1 spectrum overlaps the trial-onset spectrum across the
   whole band (|corr| 0.30–0.53). It is task-engagement block structure over a
   multi-hour session, not an intrinsic rhythm.
+
+### CA1 at rest: the sharpest evidence that single-cell rhythmicity is meaningless
+
+`11_ca1_rest_000552.py`, `figures/ca1_rest_000552.png`. **0/6 sessions have
+sequences** (102–221 units, 39–148 min of continuous task-free awake rest).
+
+The value of this group is not the null itself — a CA1 null is *expected*, since
+the paper's contrast is that MEC carries a low-dimensional code with ~94% of cells
+locked to the sequence whereas hippocampal sequences involve ~5% of the network.
+It is the **dissociation**, which is more extreme here than anywhere else in the
+panel:
+
+| | single-cell rhythmicity | sessions with sequences |
+|---|---|---|
+| CA1, task-free rest | **83%** (highest in the panel) | **0/6** |
+| ORIGINAL wheel / darkness | 53% | 2/2 |
+
+**CA1 at rest is *more* ultraslow-rhythmic than the paper's own data where the
+effect is known to be present, at a median peak of 0.0066 Hz — squarely inside the
+paper's reported 0.006–0.008 Hz band — and yet has no population sequences at
+all.** Median oscillation score is 0.00 (Wilcoxon vs the 0.05 chance level,
+p=0.031). At its single best 500 s window CA1 reaches a rotation index of 0.22,
+against 0.75 for the wheel control.
+
+This is what the paper's own Fig. 5 asserts (PaS and VIS cells are "ultraslow and
+periodic" yet form no sequences), reproduced in a third region and in a condition
+the authors never tested. It also sets a trap for anyone reusing this work: a
+pipeline that stops at single-cell spectra would report CA1-at-rest as a *stronger*
+replication than the original data. Only the population test discriminates.
+
+Two caveats. This is not the paper's condition (rats resting in a home cage, not
+mice running a wheel in darkness), and a null cannot separate "the phenomenon is
+MEC-specific" from "insufficient power" — though power is not the obvious
+explanation, since several of these sessions are *longer* than the paper's own
+25–26 min Neuropixels recordings and carry comparable unit counts.
 
 ### Interpretation
 
@@ -210,6 +259,10 @@ python3 scripts/07_run_all_sessions.py
 
 # aggregate to the fraction-of-sessions figure the paper reports
 python3 scripts/08_session_summary.py
+
+# CA1 during long task-free rest (000552) + its dissociation figure
+python3 scripts/11_ca1_rest_000552.py
+python3 scripts/12_ca1_rest_figure.py
 ```
 
 All data is streamed from DANDI and EBRAINS on demand (remfile + a local disk
@@ -234,6 +287,8 @@ scripts/
   08_session_summary.py    # fraction of sessions with sequences (paper's quantity)
   09_validate_windowed.py  # windowed detector validated on both original wheel mice
   10_macaque_control.py    # macaque EC: is the 'oscillation' task-engagement structure?
+  11_ca1_rest_000552.py    # CA1 during long TASK-FREE rest (the condition, minus the region)
+  12_ca1_rest_figure.py    # the rhythmicity-vs-sequences dissociation + rasters
   scan_001701_regions.py   # metadata scan: which sessions actually have MEC/V1 units
 figures/  results/  cache/
 replication_notebook.py / .ipynb   # narrative walkthrough

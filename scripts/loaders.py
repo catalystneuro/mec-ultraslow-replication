@@ -103,6 +103,79 @@ def load_ebrains(mouse, task, min_rate=0.5, trim_start_s=300.0, quality=("good",
                    description=task)
 
 
+def load_000552(asset_path, state="Awake", min_rate=0.5, trim_start_s=300.0):
+    """Hippocampal CA1 during long TASK-FREE rest (Huszar et al., dandiset 000552).
+
+    Why this dataset is here: every entorhinal dataset on DANDI runs a task from
+    start to finish, so none can be asked the paper's question in the paper's
+    condition (no task, no scheduled rewards, minimal sensory drive). 000552 is
+    the archive's best available approximation -- multi-hour sessions in which
+    PRE/POST home-cage blocks bracket a maze epoch, with 100-376 units. It trades
+    the region (CA1, not MEC) for the condition.
+
+    That trade makes this a REGION control in the paper's own logic, not a
+    replication: the paper's contrast is that MEC carries a low-dimensional code
+    where ~94% of cells lock to the sequence, whereas hippocampus carries a
+    high-dimensional code in which reported sequences involve ~5% of the network.
+    A CA1 null is therefore the EXPECTED outcome and corroborates rather than
+    tests. It does, however, bear on the authors' open question about sleep and
+    rest, and it is the only public data that can be asked in a task-free state.
+
+    Epoch selection: the epochs table is UNLABELLED (only start/stop), so
+    task-free epochs are identified empirically as those containing no trials.
+    Brain state comes from processing/behavior/SleepStates. We take the single
+    longest continuous bout of `state` inside a task-free epoch -- concatenating
+    bouts would destroy the phase continuity a minute-scale sequence lives in.
+    As in the ephys pipeline elsewhere, the first 5 min are dropped for arousal.
+
+    Caveat: electrodes.location is 'unknown' throughout; CA1 comes from the
+    publication, not the file. Darkness is undocumented (home-cage rest is
+    presumably dim/dark, but no metadata asserts it).
+    """
+    io, nwb = _open("000552", asset_path)
+
+    ep = nwb.epochs.to_dataframe()
+    trials = nwb.trials.to_dataframe() if nwb.trials is not None else None
+    ts = np.asarray(trials["start_time"]) if trials is not None else np.array([])
+    ts = ts[np.isfinite(ts)]
+
+    task_free = [(float(r.start_time), float(r.stop_time)) for r in ep.itertuples()
+                 if not ((ts >= r.start_time) & (ts < r.stop_time)).any()]
+
+    states = nwb.processing["behavior"]["SleepStates"].to_dataframe()
+    best = (0.0, None, None)
+    for r in states.itertuples():
+        if str(r.label) != state:
+            continue
+        for a0, b0 in task_free:
+            x, y = max(float(r.start_time), a0), min(float(r.stop_time), b0)
+            if y - x > best[0]:
+                best = (y - x, x, y)
+    if best[1] is None:
+        io.close()
+        raise ValueError(f"no task-free '{state}' bout in {asset_path}")
+
+    t0, t1 = best[1] + trim_start_s, best[2]
+
+    units = nwb.units
+    spike_times, unit_ids = [], []
+    for i in range(len(units)):
+        s = np.asarray(units["spike_times"][i])
+        s = s[(s >= t0) & (s <= t1)]
+        spike_times.append(s)
+        unit_ids.append(i)
+    unit_ids = np.array(unit_ids)
+    spike_times, unit_ids = _filter_rate(spike_times, unit_ids, t0, t1, min_rate)
+
+    subject = nwb.subject.subject_id if nwb.subject else "?"
+    io.close()
+    return Session(dandiset="000552", asset_path=asset_path, subject=subject,
+                   species="Mus musculus",
+                   region="CA1 (from publication; electrodes.location unannotated)",
+                   spike_times=spike_times, unit_ids=unit_ids, t0=t0, t1=t1,
+                   description=f"task-free {state} rest ({(t1-t0)/60:.0f} min)")
+
+
 def _open(dsid, asset_path):
     ds = DandiAPIClient().get_dandiset(dsid, "draft")
     asset = ds.get_asset_by_path(asset_path)

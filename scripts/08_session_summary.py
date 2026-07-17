@@ -25,6 +25,7 @@ GROUPS = [
     ("001701", "MEC", "DANDI 001701\nmouse MEC\nX-maze", "#d6604d"),
     ("001701", "V1", "DANDI 001701\nvisual cortex\n(region control)", "#b2b2b2"),
     ("000897", "EC", "DANDI 000897\nMACAQUE EC\nmental nav.", "#d6604d"),
+    ("000552", "CA1-Awake", "DANDI 000552\nmouse CA1\ntask-free rest\n(region control)", "#b2b2b2"),
 ]
 
 recs = defaultdict(list)
