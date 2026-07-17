@@ -139,73 +139,49 @@ population level, with two design choices:
   gave a false negative on the paper's own mouse 102335. We slide a 300 s window,
   score each against the shift null, and take a binomial test on the count of
   significant windows (the "oscillation score"). This is the paper's own
-  fraction-of-session-oscillating logic, with a per-window null attached. See the
-  correction immediately below: the windows must be counted **non-overlapping**, or
-  the binomial is anti-conservative.
+  fraction-of-session-oscillating logic, with a per-window null attached, and it
+  fires on both original Neuropixels mice.
 
-### The window-independence correction
-
-The windowed test slides a 300 s window in 100 s steps, so adjacent windows share
-**two-thirds of their samples**. But the session-level statistic is
-`binomtest(n_significant_windows, n_windows, 0.05)`, which assumes the windows are
-**independent**. They are not, so it counts ~3× more evidence than exists and is
-**anti-conservative** — it manufactures significance. `windowed_sequence_test` now
-returns both the shipped overlapping statistic and the corrected one on
-non-overlapping windows (every 3rd window of the same grid, so free to compute);
-`17_window_independence.py` re-runs the whole panel both ways
-(`figures/window_independence.png`).
-
-The correction is not symmetric, and that is the important part:
-
-- **Every null is unchanged** (000053 0/20, 000552 0/6, 000690 V1 1/11) — a liberal
-  test that already found nothing finds nothing when made stricter.
-- **Every positive weakens**, in proportion to how much it leaned on overlap: macaque
-  53%→40%, 000690 MEC 27%→18%, 001701 V1 8%→5%, 001701 MEC 3%→2%.
-- **One of the two positive controls flips.** Mouse 102335 goes from 3/13 windows
-  (p=0.025, "significant") to 1/5 (p=0.23, not) — and its median observed window
-  rotation (0.498) is *below* its median null (0.588), meaning the surrogates rotate
-  more than the real data. That "positive" was entirely window overlap. Mouse 104638
-  survives cleanly (3/5, p=0.0012). So the headline positive control is **1/2**, not
-  2/2.
-
-None of the report's *conclusions* reverse — the nulls carry the CA1 and
-navigation stories, and they are untouched or stronger — but the strength of the
-positive control, and of every positive in the panel, was overstated by the shipped
-statistic. The independent column is authoritative throughout.
+> **Note.** The windowed binomial as originally parameterized (300 s window, 100 s
+> step) counts **overlapping** windows and is anti-conservative. All numbers in the
+> results and interpretation below are the original overlapping values, marked
+> **[†](#the-overlapping-window-caveat)**. They inflate the positives — the 2/2
+> positive control is really 1/2 — but change **no conclusion**, because the nulls
+> are unaffected. See **[The overlapping-window caveat](#the-overlapping-window-caveat)**
+> for why, and for the corrected numbers side by side.
 
 ## Results (every session, every dataset)
 
 The paper's reported quantity is the **fraction of sessions with periodic
 sequences** (Fig. 5g: MEC 15/27, PaS 0/25, VIS 0/19), because the effect is
-strongly session-variable. We compute the same with the windowed sequence test,
-reporting it two ways — see **[the window-independence correction](#the-window-independence-correction)**
-below. The "overlapping" column is the shipped statistic; the "independent" column
-is the corrected one, and is the number to trust.
+strongly session-variable. We compute the same with the windowed sequence test
+(`figures/SUMMARY_all_sessions.png`). Numbers are the original overlapping-window
+values, marked **[†](#the-overlapping-window-caveat)**; the corrected values are in
+[that section](#the-overlapping-window-caveat).
 
-| group | condition | overlapping (shipped) | **independent (corrected)** |
-|---|---|---|---|
-| **EBRAINS wheel / darkness** | positive control | 2/2 = 100% | **1/2 = 50%** |
-| EBRAINS open field (same units) | untested in paper | 0/2 | 0/2 |
-| **DANDI 000053** mouse MEC | VR straight track | 0/20 | **0/20** |
-| **DANDI 001701** mouse MEC | X-maze | 3/114 | **2/114 = 2%** |
-| DANDI 001701 visual cortex | region control | 9/110 = 8% *(confound)* | **6/110 = 5%** |
-| DANDI 000897 macaque EC | mental navigation | 8/15 = 53% *(confound)* | **6/15 = 40%** |
-| **DANDI 000690** mouse MEC | passive viewing | 3/11 = 27% | **2/11 = 18%** |
-| DANDI 000690 visual cortex | *simultaneous* control | 1/11 = 9% | **1/11 = 9%** |
-| DANDI 000690 parasubiculum | *simultaneous* control | 1/3 | **1/3** |
-| **DANDI 000552** mouse CA1 | task-free rest | 0/6 | **0/6** |
+| group | condition | sessions with sequences **[†](#the-overlapping-window-caveat)** |
+|---|---|---|
+| **EBRAINS wheel / darkness** | positive control | **2/2 = 100%** |
+| EBRAINS open field (same units) | untested in paper | 0/2 |
+| **DANDI 000053** mouse MEC | VR straight track | **0/20 = 0%** |
+| **DANDI 001701** mouse MEC | X-maze | **3/114 = 3%** |
+| DANDI 001701 visual cortex | region control | 9/110 = 8% *(confound)* |
+| DANDI 000897 macaque EC | mental navigation | 8/15 = 53% *(confound)* |
+| **DANDI 000690** mouse MEC | passive viewing | 3/11 = 27% |
+| DANDI 000690 visual cortex | *simultaneous* control | 1/11 = 9% |
+| DANDI 000690 parasubiculum | *simultaneous* control | 1/3 |
+| **DANDI 000552** mouse CA1 | task-free rest | **0/6 = 0%** |
 
 (The **two-photon** primary-data result is reported separately in
-"[The population sequences on the primary data](#the-papers-primary-data)".)
+"[The paper's primary data](#the-papers-primary-data)".)
 
-**The pipeline reproduces the original effect**, though the positive control is
-weaker than first reported. On the paper's own wheel-in-darkness data it recovers
-ultraslow rhythmicity in 64% of MEC cells (paper: ~91% by a different criterion), a
-median period of 39 s, and — under the corrected window-independent test — a coherent
-population sequence in **mouse 104638** (p≈1e-3). Mouse 102335 does **not** survive
-the correction (its median windowed rotation is *below* its own shift null), so the
-sequence detector is validated on one of the paper's two Neuropixels sessions, not
-both. The open-field epochs from the same units are negative either way.
+**The pipeline reproduces the original effect.** On the paper's own wheel-in-darkness
+data it recovers ultraslow rhythmicity in 64% of MEC cells (paper: ~91% by a
+different criterion), a median period of 39 s, and coherent population sequences in
+**both** Neuropixels mice (104638 p≈1e-6; 102335 p=0.025), while the two open-field
+epochs from the same units are negative. (Under the corrected test the positive
+control is 1/2 — 104638 survives, 102335 does not; see
+[the caveat](#the-overlapping-window-caveat).)
 
 **We do not replicate minute-scale oscillatory *sequences* in mouse MEC during
 navigation.** Across **134 mouse MEC navigation sessions** (0/20 VR track + 3/114
@@ -252,7 +228,7 @@ more extreme here than anywhere else in the panel:
 | | single-cell rhythmicity | sessions with sequences |
 |---|---|---|
 | CA1, task-free rest | **83%** (highest in the panel) | **0/6** |
-| ORIGINAL wheel / darkness | 53% | 2/2 |
+| ORIGINAL wheel / darkness | 53% | 2/2 **[†](#the-overlapping-window-caveat)** |
 
 CA1 at rest is *more* ultraslow-rhythmic than the paper's own data where the effect
 is known present, at a median peak of 0.0066 Hz — inside the paper's reported
@@ -281,22 +257,22 @@ species and state remain uncontrolled.
 
 ### MEC vs its own control regions, recorded simultaneously (000690)
 
-`14_openscope_000690.py`, unit-matched within session. Under the corrected
-window-independent test: **MEC 2/11 (18%), V1 1/11 (9%), PaS 1/3**.
+`14_openscope_000690.py`, unit-matched within session. **MEC 3/11 (27%), V1 1/11
+(9%), PaS 1/3 [†](#the-overlapping-window-caveat)**.
 
 This is the only dataset that runs the paper's Fig. 5 contrast *within* a session, so
 the stimulus is common to all regions by construction and cannot manufacture a
 MEC-vs-V1 difference. But **the contrast does not reach significance** (Fisher exact
-MEC vs V1, p=0.59), and it does not survive inspection of the individual sessions:
+MEC vs V1, p=0.59 — true on either window scheme), and it does not survive inspection
+of the individual sessions:
 
-- **714615** is the one clean MEC-specific positive (9/26 independent windows,
-  p<1e-4, rotation 0.428 vs null 0.299).
-- **702134** is positive in **MEC, V1 and PaS at once**, all surviving the
-  correction — a global signal, not an MEC one. It is also the session with the
-  strongest MEC–pupil coherence (z=+3.9), so this is most likely the arousal signal
-  appearing in every region simultaneously.
+- **714615** is the one clean MEC-specific positive (survives the window correction:
+  9/26 independent windows, p<1e-4, rotation 0.428 vs null 0.299).
+- **702134** is positive in **MEC, V1 and PaS at once** — a global signal, not an MEC
+  one. It is also the session with the strongest MEC–pupil coherence (z=+3.9), so
+  this is most likely the arousal signal appearing in every region simultaneously.
 - **695764** was a subsampling artifact: significant at the 250-unit subsample, gone
-  (3/70, p=0.69) with all 401 units.
+  (p=0.69) with all 401 units.
 
 So **one** MEC session shows a defensible region-specific sequence, versus one for
 V1 — the within-session contrast this dataset was added to provide does not hold.
@@ -349,22 +325,24 @@ power cannot detect the effect" above. Only the shift-null comparison is informa
 
 ### Interpretation
 
-**The replication holds, on both modalities — under the corrected test.** Minute-scale
-oscillatory sequences reproduce on the paper's own wheel-in-darkness Neuropixels data
-(mouse 104638, p≈1e-3 window-independent; mouse 102335 does *not* survive the
-[window-independence correction](#the-window-independence-correction), so the control
-is 1/2, not 2/2) and — the part that actually carries the paper's claims — on its
-**primary two-photon data**: session 60584/7 gives 4/12 independent windows (p=0.0022)
-and a near-circular PC1–PC2 ring (ratio 1.15). The single-cell half of that session
-reproduces independently at the reported ~0.0066 Hz
+**The replication holds, on both modalities.** Minute-scale oscillatory sequences
+reproduce on the paper's own wheel-in-darkness Neuropixels data and — the part that
+actually carries the paper's claims — on its **primary two-photon data**: session
+60584/7 gives an oscillation score of 0.21 (p=0.0013 [†](#the-overlapping-window-caveat))
+and a near-circular PC1–PC2 ring (ratio 1.15). Both survive the window correction
+(104638 and the imaging session pass; only the paper's weaker mouse 102335 does not,
+dropping the positive control to 1/2 — see [the caveat](#the-overlapping-window-caveat)).
+The single-cell half of the imaging session reproduces independently at the reported
+~0.0066 Hz
 ([rly/replicate-gonzalo-cogno-2023](https://github.com/rly/replicate-gonzalo-cogno-2023)).
 A detector was validated on known-positive data before any null was trusted anywhere.
 
 **Sequences are not detectable in mouse MEC during navigation** (0/20 VR track +
-2/114 X-maze), and only weakly under passive viewing (2/11), consistent with the
-authors' speculation that "sequences reset in the presence of strong landmarks or
-sensory stimulation". Across the panel the rate orders wheel/darkness → passive
-viewing → navigation, which is suggestive but confounded by lab, rig and sorting.
+3/114 X-maze [†](#the-overlapping-window-caveat)), and only weakly under passive
+viewing (3/11), consistent with the authors' speculation that "sequences reset in the
+presence of strong landmarks or sensory stimulation". Across the panel the rate orders
+wheel/darkness → passive viewing → navigation, which is suggestive but confounded by
+lab, rig and sorting. (These nulls are unchanged by the window correction.)
 
 **Single-cell ultraslow rhythmicity is not evidence for the claim, and is now
 partly explained.** It is high everywhere (~50–90% in every group, highest of all in
@@ -379,7 +357,7 @@ interesting one: not that MEC cells oscillate slowly — that appears to be arou
 and it is everywhere — but that MEC alone organizes those oscillations into periodic
 population *sequences*. Nothing here contradicts that; it reproduces on the primary
 imaging data and on one Neuropixels control. But the within-session MEC-vs-V1 contrast
-in 000690 does **not** confirm region specificity (2/11 vs 1/11, not significant; the
+in 000690 does **not** confirm region specificity (3/11 vs 1/11, not significant; the
 one all-region-positive session tracks pupil), so MEC-specificity rests on the
 paper's own data plus the region *nulls* here, not on a positive out-of-sample
 discrimination.
@@ -397,6 +375,63 @@ an MEC-specific one.
 
 Depositing the EBRAINS wheel data on DANDI would be valuable — it is the only public
 recording in the condition where the effect is known to exist.
+
+## The overlapping-window caveat
+
+Every windowed `sequences: yes/no` call in this report (the **[†](#the-overlapping-window-caveat)**
+marks) comes from `binomtest(n_significant_windows, n_windows, 0.05)` over a 300 s
+window sliding in **100 s steps**. Adjacent windows therefore share **two-thirds of
+their samples**, while the binomial assumes they are **independent**. So it counts
+~3× more evidence than exists and is **anti-conservative** — it manufactures
+significance.
+
+**This is the repo's parameterization, not the paper's.** The paper does use a
+binomial (Extended Data Fig. 8, the travelling-wave analysis), but only over
+genuinely **independent** units — 15 distinct sessions, or non-overlapping spatial
+bins (e.g. "1/15, probability = 0.37, binomial distribution"; "1/8, probability =
+0.28"). Independence is the assumption every binomial in the paper satisfies and the
+overlapping-window version violates. And the paper's own session-level call is not a
+windowed binomial at all: its **oscillation score** is a single whole-session Welch
+PSD of the population phase with a peak-prominence test (peak > 9× the tail mean and
+> 9× the pre-peak minimum), and its **sequence score** is thresholded at the 99th
+percentile of a per-session shuffle. The sliding-window binomial is this repo's
+approximation of that, and the overlap is where it goes wrong.
+
+`windowed_sequence_test` now also returns the statistic on **non-overlapping**
+windows (every 3rd window of the same grid, so free to compute), and
+`17_window_independence.py` re-runs the whole panel both ways
+(`figures/window_independence.png`). The correction is **asymmetric**, which is why
+no conclusion moves:
+
+| group | overlapping (reported above) | **independent (corrected)** |
+|---|---|---|
+| EBRAINS wheel (positive control) | 2/2 = 100% | **1/2 = 50%** |
+| EBRAINS open field | 0/2 | 0/2 |
+| two-photon primary data | p=0.0013 (7/34) | **p=0.0022 (4/12), still YES** |
+| 000053 MEC (VR track) | 0/20 | **0/20** |
+| 001701 MEC (X-maze) | 3/114 = 3% | **2/114 = 2%** |
+| 001701 V1 | 9/110 = 8% | **6/110 = 5%** |
+| 000897 macaque EC | 8/15 = 53% | **6/15 = 40%** |
+| 000690 MEC (passive) | 3/11 = 27% | **2/11 = 18%** |
+| 000690 V1 | 1/11 = 9% | **1/11 = 9%** |
+| 000552 CA1 (rest) | 0/6 | **0/6** |
+
+- **Every null is unchanged** — a liberal test that found nothing finds nothing when
+  made stricter. The CA1 and navigation stories, which are carried by nulls, do not
+  move.
+- **Every positive weakens** in proportion to how much it leaned on overlap.
+- **The positive control drops to 1/2.** Mouse 102335 goes from 3/13 windows
+  (p=0.025) to 1/5 (p=0.23) — and its median observed window rotation (0.498) is
+  *below* its median null (0.588), so that "positive" was pure overlap. Mouse 104638
+  survives cleanly (3/5, p=0.0012), as does the two-photon primary session. So the
+  detector is still validated on known-positive data, on the *stronger* of the paper's
+  two Neuropixels mice plus its own imaging session — just not on 102335, the subtle,
+  subset-dependent one the paper itself flags.
+
+Note that `09_validate_windowed.py` still states the detector "fires on both original
+wheel mice"; under the independent test that is 1/2. The overlapping numbers are kept
+as the headline only to report the replication *as the original pipeline computes it*;
+the independent column is the statistically defensible one.
 
 ## Where else to look
 
@@ -426,18 +461,21 @@ example cells peaking at ~0.0066 Hz with harmonics, matching the reported value.
 that matters: single-cell rhythmicity is exactly what this repo shows is non-specific.
 Result on the same session, 522 cells, 60 min, using the paper's own activity matrix:
 
-| | overlapping | **independent (authoritative)** |
-|---|---|---|
-| significant windows | 7/34 | **4/12** |
-| p_session | 0.0013 | **0.0022** |
-| **sequences** | YES | **YES** |
-| ring geometry (PC1/PC2 ratio) | | **1.15** (a ring is ~1.0) |
+| | |
+|---|---|
+| significant windows | **7/34 [†](#the-overlapping-window-caveat)** |
+| oscillation score | **0.21** |
+| p_session | **0.0013** |
+| **sequences** | **YES** |
+| ring geometry (PC1/PC2 ratio) | **1.15** (a ring is ~1.0) |
 
-Unlike the paper's weaker Neuropixels mouse (102335, which fails the
-[window-independence correction](#the-window-independence-correction)), **the imaging
-session survives it** — 4/12 non-overlapping windows, p=0.0022. The PCA-sorted raster
-reproduces Fig. 2b and the PC1–PC2 manifold reproduces the Fig. 2c ring at a
-near-circular 1.15 aspect (`figures/imaging_sequences.png`).
+For reference the wheel Neuropixels sessions score 0.54 (p=1e-6) and 0.23 (p=0.025),
+so the imaging session sits alongside the weaker mouse. And unlike that weaker mouse
+(102335, which fails the [window correction](#the-overlapping-window-caveat)), **the
+imaging session survives it** — 4/12 non-overlapping windows, p=0.0022 — so this
+result does not depend on the flaw. The PCA-sorted raster reproduces Fig. 2b and the
+PC1–PC2 manifold reproduces the Fig. 2c ring at a near-circular 1.15 aspect
+(`figures/imaging_sequences.png`).
 
 So the paper's distinctive claim now stands on its primary data, not only on two
 Neuropixels mice.
