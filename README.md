@@ -301,9 +301,14 @@ power cannot detect the effect" above. Only the shift-null comparison is informa
 
 ### Interpretation
 
-**The replication holds.** Minute-scale oscillatory sequences reproduce on the
-paper's own wheel-in-darkness data (2/2 mice), with a detector validated there before
-any null was trusted anywhere else.
+**The replication holds — for the Neuropixels data.** Minute-scale oscillatory
+sequences reproduce on the paper's own wheel-in-darkness recordings (2/2 mice), with
+a detector validated there before any null was trusted anywhere else. Separately, the
+paper's *primary* two-photon data reproduces its single-cell Figure 1 at the reported
+~0.0066 Hz ([rly/replicate-gonzalo-cogno-2023](https://github.com/rly/replicate-gonzalo-cogno-2023)).
+Note what this does and does not cover: the **sequence** claim has still only been
+tested on the two Neuropixels mice, never on the 15 imaging sessions that carry the
+paper's headline numbers.
 
 **Sequences are not detectable in mouse MEC during navigation** (0/20 VR track +
 3/114 X-maze), and only weakly under passive viewing (3/11), consistent with the
@@ -350,17 +355,47 @@ recorded in the paper — and the only LEC dandiset is empty. **Medial septum** 
 way to ask whether the rhythm is imposed rather than intrinsic; all three septum
 datasets fail as deposited. Neither gap is fixable by analysis.
 
-Two things would move this further than any additional DANDI mining:
+### What has already been done elsewhere, and what is still open
 
-1. **Test the paper's primary data.** Its headline numbers — 91% oscillatory, 94%
-   phase-locked, 44% at 0.006–0.008 Hz, the ring manifold, 15/27 sessions — are all
-   from **two-photon imaging of 6,231 cells across 15 sessions**. The Neuropixels
-   recordings used here as the positive control were the paper's *validation*
-   experiment. The imaging data is the actual claim and is untouched.
-2. **Run the authors' own code** (`soledadgcogno/Ultraslow-oscillatory-sequences`) on
-   the EBRAINS deposit and check the published numbers reproduce. That is
-   *computational* reproducibility, distinct from the methodological reproduction
-   here, and nobody has done it.
+**The paper's primary data has been tested** — in
+[rly/replicate-gonzalo-cogno-2023](https://github.com/rly/replicate-gonzalo-cogno-2023),
+independently of this repo. That work goes to the EBRAINS **two-photon** deposit
+(`data/calcium/60584/2019-01-29/MUnit0/`, the paper's own Fig. 1 example session),
+loads the Suite2p `spks.npy`, and applies the paper's preprocessing (SNR>4,
+downsample ×4 to 7.73 Hz, binarize at mean+1.5 SD). It **reproduces Figure 1**: the
+stacked z-scored autocorrelations show the same vertical banding, and the example
+cells show a sharp PSD peak at ~0.0066 Hz with harmonics — the paper's reported
+value. It also runs the Neuropixels files and the Giocomo 000053 data through the
+same pynapple pipeline.
+
+So the **single-cell** half of the paper replicates on its own primary data,
+independently, at the reported frequency. Combined with the wheel positive control
+here, the oscillation is solid.
+
+What is **still open** is the half that actually carries the claim:
+
+1. **The population sequences have never been tested on the imaging data.** The prior
+   work covers Fig. 1 — autocorrelations and PSDs, i.e. single-cell rhythmicity. But
+   single-cell rhythmicity is exactly what this repo shows is *non-specific* (83% in
+   CA1 at rest with zero sequences; and in MEC it tracks pupil in 8/11 sessions). The
+   distinctive claims — the PCA sorting, the ring manifold, ~94% phase locking, 15/27
+   oscillatory sessions — are all Figs. 2–3 on **6,231 cells across 15 imaging
+   sessions**, and no one has run a population sequence test on them. The sequence
+   result currently rests entirely on the paper's two Neuropixels mice.
+2. **The quantitative check against the paper's published source data was set up but
+   not finished.** That notebook loads the source-data PSD for cell 26 from Extended
+   Data Fig. 3 and stops there. Comparing it point-by-point against the recomputed
+   PSD is a few lines and would turn a visual match into a numeric one.
+
+Two reproducibility findings from that work worth recording here:
+
+- **The authors' MATLAB cannot be run as published.** Both `analysis_npx_b.m` and
+  `Autocorrelations_PSDs_examples_b.m` call `npx_init`, which is not in the
+  repository, and paths are hardcoded to a lab drive (`W:\npxwaves\MEC\`). So
+  *computational* reproducibility — same code, same data, same numbers — is currently
+  blocked, independent of the methodological reproduction done here.
+- **A unit-count discrepancy.** The paper states 469 good units for mouse 104638; the
+  deposited file yields 487 by the stated criteria.
 
 ### A methods bug worth flagging for anyone reusing this
 
