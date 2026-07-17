@@ -1,0 +1,22 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-Lamarr/sub-Lamarr_ses-Lamarr-DY19-g0_behavior+ecephys.nwb",
+  "region_select": "MEC",
+  "status": "ok",
+  "n_units": 198,
+  "subject": "Lamarr",
+  "duration_min": 17.1051907111599,
+  "n_windows": 8,
+  "n_sig_windows": 0,
+  "frac_sig_windows": 0.0,
+  "p_session": 1.0,
+  "n_windows_indep": 3,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.19614147909967844,
+  "median_rot_null": 0.36977491961414793,
+  "best_rot_z": -0.000732839943342168,
+  "sequences": false,
+  "sequences_indep": false
+}

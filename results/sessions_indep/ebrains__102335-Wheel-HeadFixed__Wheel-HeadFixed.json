@@ -1,0 +1,22 @@
+{
+  "dandiset": "ebrains",
+  "asset": "102335/Wheel-HeadFixed",
+  "region_select": "Wheel-HeadFixed",
+  "status": "ok",
+  "n_units": 273,
+  "subject": "102335",
+  "duration_min": 26.55,
+  "n_windows": 13,
+  "n_sig_windows": 3,
+  "frac_sig_windows": 0.23076923076923078,
+  "p_session": 0.02450784174587116,
+  "n_windows_indep": 5,
+  "n_sig_windows_indep": 1,
+  "frac_sig_windows_indep": 0.2,
+  "p_session_indep": 0.2262190625,
+  "median_rot": 0.4983922829581994,
+  "median_rot_null": 0.5884244372990354,
+  "best_rot_z": 3.941237235748773,
+  "sequences": true,
+  "sequences_indep": false
+}

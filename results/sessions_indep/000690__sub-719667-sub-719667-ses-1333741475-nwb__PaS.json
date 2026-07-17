@@ -1,0 +1,22 @@
+{
+  "dandiset": "000690",
+  "asset": "sub-719667/sub-719667_ses-1333741475.nwb",
+  "region_select": "PaS",
+  "status": "ok",
+  "n_units": 81,
+  "subject": "719667",
+  "duration_min": 135.06879195361287,
+  "n_windows": 79,
+  "n_sig_windows": 2,
+  "frac_sig_windows": 0.02531645569620253,
+  "p_session": 0.9103320393500648,
+  "n_windows_indep": 27,
+  "n_sig_windows_indep": 1,
+  "frac_sig_windows_indep": 0.037037037037037035,
+  "p_session_indep": 0.7496559102575447,
+  "median_rot": 0.1639871382636656,
+  "median_rot_null": 0.26688102893890675,
+  "best_rot_z": 3.0515478153489792,
+  "sequences": false,
+  "sequences_indep": false
+}

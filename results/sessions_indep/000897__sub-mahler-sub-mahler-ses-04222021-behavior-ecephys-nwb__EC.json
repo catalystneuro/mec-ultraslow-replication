@@ -1,0 +1,22 @@
+{
+  "dandiset": "000897",
+  "asset": "sub-mahler/sub-mahler_ses-04222021_behavior+ecephys.nwb",
+  "region_select": "EC",
+  "status": "ok",
+  "n_units": 25,
+  "subject": "mahler",
+  "duration_min": 278.3391838888889,
+  "n_windows": 165,
+  "n_sig_windows": 21,
+  "frac_sig_windows": 0.12727272727272726,
+  "p_session": 8.516716518452974e-05,
+  "n_windows_indep": 55,
+  "n_sig_windows_indep": 10,
+  "frac_sig_windows_indep": 0.18181818181818182,
+  "p_session_indep": 0.00035942241213004247,
+  "median_rot": 0.13183279742765272,
+  "median_rot_null": 0.10610932475884244,
+  "best_rot_z": 5.058703184398093,
+  "sequences": true,
+  "sequences_indep": true
+}

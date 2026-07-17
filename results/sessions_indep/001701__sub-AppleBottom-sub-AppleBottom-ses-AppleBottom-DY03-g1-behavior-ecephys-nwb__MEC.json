@@ -1,0 +1,22 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-AppleBottom/sub-AppleBottom_ses-AppleBottom-DY03-g1_behavior+ecephys.nwb",
+  "region_select": "MEC",
+  "status": "ok",
+  "n_units": 34,
+  "subject": "AppleBottom",
+  "duration_min": 33.315986636679064,
+  "n_windows": 18,
+  "n_sig_windows": 0,
+  "frac_sig_windows": 0.0,
+  "p_session": 1.0,
+  "n_windows_indep": 6,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.06430868167202572,
+  "median_rot_null": 0.12540192926045016,
+  "best_rot_z": 0.5684989987923532,
+  "sequences": false,
+  "sequences_indep": false
+}

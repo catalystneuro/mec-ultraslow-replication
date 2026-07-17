@@ -1,0 +1,22 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-TopHat/sub-TopHat_ses-TopHat-DY02-g1_behavior+ecephys.nwb",
+  "region_select": "V1",
+  "status": "ok",
+  "n_units": 37,
+  "subject": "TopHat",
+  "duration_min": 20.61545814609372,
+  "n_windows": 10,
+  "n_sig_windows": 0,
+  "frac_sig_windows": 0.0,
+  "p_session": 1.0,
+  "n_windows_indep": 4,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.157556270096463,
+  "median_rot_null": 0.14469453376205788,
+  "best_rot_z": 1.7038809935574706,
+  "sequences": false,
+  "sequences_indep": false
+}

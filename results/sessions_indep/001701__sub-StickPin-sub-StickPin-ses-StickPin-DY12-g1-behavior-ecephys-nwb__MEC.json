@@ -1,0 +1,22 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-StickPin/sub-StickPin_ses-StickPin-DY12-g1_behavior+ecephys.nwb",
+  "region_select": "MEC",
+  "status": "ok",
+  "n_units": 89,
+  "subject": "StickPin",
+  "duration_min": 37.95990278184573,
+  "n_windows": 20,
+  "n_sig_windows": 1,
+  "frac_sig_windows": 0.05,
+  "p_session": 0.6415140775914578,
+  "n_windows_indep": 7,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.08038585209003216,
+  "median_rot_null": 0.19614147909967847,
+  "best_rot_z": 2.035087506669351,
+  "sequences": false,
+  "sequences_indep": false
+}

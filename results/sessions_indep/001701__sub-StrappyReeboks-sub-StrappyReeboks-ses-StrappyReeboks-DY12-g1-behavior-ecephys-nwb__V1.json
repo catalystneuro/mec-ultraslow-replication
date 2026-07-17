@@ -1,0 +1,22 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-StrappyReeboks/sub-StrappyReeboks_ses-StrappyReeboks-DY12-g1_behavior+ecephys.nwb",
+  "region_select": "V1",
+  "status": "ok",
+  "n_units": 59,
+  "subject": "StrappyReeboks",
+  "duration_min": 18.51285513832206,
+  "n_windows": 9,
+  "n_sig_windows": 0,
+  "frac_sig_windows": 0.0,
+  "p_session": 1.0,
+  "n_windows_indep": 3,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.03536977491961415,
+  "median_rot_null": 0.19614147909967847,
+  "best_rot_z": 1.0729887320879063,
+  "sequences": false,
+  "sequences_indep": false
+}

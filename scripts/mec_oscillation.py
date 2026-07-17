@@ -486,15 +486,39 @@ def windowed_sequence_test(z, bin_s, window_s=300.0, step_s=100.0,
     n_win = len(starts)
     p_session = float(stats.binomtest(n_sig, n_win, 0.05, alternative="greater").pvalue)
 
+    # ---- the same test on INDEPENDENT (non-overlapping) windows.
+    # The binomial above assumes the windows are independent, but with the defaults
+    # (300 s window, 100 s step) adjacent windows share 2/3 of their samples, so it
+    # counts ~3x more evidence than exists and is anti-conservative. Non-overlapping
+    # windows are exactly every k-th window of this grid, so the corrected statistic
+    # costs nothing extra to compute.
+    #
+    # This matters: on the paper's own mouse 102335 the overlapping test gives
+    # 3/13 windows, p=0.025 (significant) while the independent test gives 1/5,
+    # p=0.23 (not) -- and that session's median observed rotation is BELOW its median
+    # null. The correction weakens POSITIVES (and the weaker positive control) while
+    # leaving NULLS untouched or stronger, since a liberal test that found nothing
+    # would find nothing under a stricter one.
+    k = max(1, int(round(window_s / step_s)))
+    sub = np.arange(0, len(starts), k)
+    n_sig_i = int((p_win[sub] < 0.05).sum())
+    n_win_i = len(sub)
+    p_session_i = float(stats.binomtest(n_sig_i, n_win_i, 0.05,
+                                        alternative="greater").pvalue)
+
     return dict(
         n_windows=n_win, n_sig_windows=n_sig,
         frac_sig_windows=float(n_sig / n_win),      # ~ the paper's 'oscillation score'
         p_session=p_session,
+        n_windows_indep=n_win_i, n_sig_windows_indep=n_sig_i,
+        frac_sig_windows_indep=float(n_sig_i / n_win_i),
+        p_session_indep=p_session_i,
         best_rot_z=float((rot_obs - rot_null.mean(0)).max()
                          / (rot_null.std(0).mean() + 1e-12)),
         median_rot=float(np.median(rot_obs)),
         median_rot_null=float(np.median(rot_null)),
         sequences=bool(p_session < 0.05),
+        sequences_indep=bool(p_session_i < 0.05),
     )
 
 
