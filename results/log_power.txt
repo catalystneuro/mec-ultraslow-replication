@@ -1,0 +1,25 @@
+
+==============================================================================
+104638 wheel: 404 units, 25.7 min, median 3.18 Hz
+==============================================================================
+  n= 50  detected 5/5  median osc-score=0.31
+  n= 75  detected 4/5  median osc-score=0.38
+  n=100  detected 5/5  median osc-score=0.46
+  n=150  detected 5/5  median osc-score=0.69
+  n=215  detected 4/5  median osc-score=0.38
+  n=275  detected 5/5  median osc-score=0.62
+  n=350  detected 5/5  median osc-score=0.54
+  n=404  detected 5/5  median osc-score=0.54
+  CA1-MATCHED (n=215, thinned to 1.25 Hz, keep p=0.39): detected 5/5, median osc-score=0.38
+
+==============================================================================
+102335 wheel: 273 units, 26.6 min, median 2.90 Hz
+==============================================================================
+  n= 50  detected 5/5  median osc-score=0.31
+  n= 75  detected 5/5  median osc-score=0.23
+  n=100  detected 5/5  median osc-score=0.38
+  n=150  detected 4/5  median osc-score=0.23
+  n=215  detected 5/5  median osc-score=0.23
+  CA1-MATCHED (n=215, thinned to 1.25 Hz, keep p=0.43): detected 5/5, median osc-score=0.31
+
+-> /Users/rly/Documents/NWB/mec-ultraslow-replication/figures/power_analysis.png

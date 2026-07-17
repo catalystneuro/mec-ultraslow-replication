@@ -209,11 +209,36 @@ the authors never tested. It also sets a trap for anyone reusing this work: a
 pipeline that stops at single-cell spectra would report CA1-at-rest as a *stronger*
 replication than the original data. Only the population test discriminates.
 
-Two caveats. This is not the paper's condition (rats resting in a home cage, not
-mice running a wheel in darkness), and a null cannot separate "the phenomenon is
-MEC-specific" from "insufficient power" — though power is not the obvious
-explanation, since several of these sessions are *longer* than the paper's own
-25–26 min Neuropixels recordings and carry comparable unit counts.
+#### Is the CA1 null just too few / too sparse cells? No — tested directly.
+
+`13_power_analysis.py`, `figures/power_analysis.png`. The worry is real on its
+face: CA1 rest has **1.9× fewer units** than the wheel control (215 vs 404) and
+**2.5× lower firing rates** (1.25 vs 3.18 Hz median). Either could hide a real
+effect. So we degraded the positive control — the paper's own wheel data, effect
+known present — down to CA1's conditions and re-ran the identical test.
+
+| positive control, degraded | sequences detected |
+|---|---|
+| n = 50 units (a quarter of CA1's) | **5/5** |
+| n = 215 units (CA1's count) | 4/5 and 5/5 |
+| **n = 215 AND thinned to 1.25 Hz (fully CA1-matched)** | **5/5 in both mice** |
+| *CA1 rest, actual* | *0/6* |
+
+**The effect survives every handicap CA1 imposes.** Subsampled to CA1's exact unit
+count and thinned to CA1's exact firing rate, both original wheel sessions still
+show sequences in 5/5 draws (median oscillation score 0.38 and 0.31, against CA1's
+0.00). It survives even at n=50 — unsurprising given the paper reports ~94% of MEC
+cells locking to the sequence: a population-wide effect does not need a large
+sample. Thinning is the right SNR control because thinning a rate-modulated
+process preserves the modulation and adds Poisson noise.
+
+So insufficient power is **not** an available explanation for the CA1 null. The
+null stands on its own.
+
+What remains uncontrolled is everything else that differs: region (CA1 vs MEC),
+species (rat vs mouse), and state (home-cage rest vs running a wheel in darkness).
+This is not the paper's condition, and a null still cannot prove MEC-specificity —
+but "not enough cells" is now ruled out rather than merely doubted.
 
 ### Interpretation
 
@@ -263,6 +288,9 @@ python3 scripts/08_session_summary.py
 # CA1 during long task-free rest (000552) + its dissociation figure
 python3 scripts/11_ca1_rest_000552.py
 python3 scripts/12_ca1_rest_figure.py
+
+# is the CA1 null just insufficient power? (subsample + rate-match the control)
+python3 scripts/13_power_analysis.py
 ```
 
 All data is streamed from DANDI and EBRAINS on demand (remfile + a local disk
@@ -289,6 +317,7 @@ scripts/
   10_macaque_control.py    # macaque EC: is the 'oscillation' task-engagement structure?
   11_ca1_rest_000552.py    # CA1 during long TASK-FREE rest (the condition, minus the region)
   12_ca1_rest_figure.py    # the rhythmicity-vs-sequences dissociation + rasters
+  13_power_analysis.py     # degrade the positive control to CA1's n and rate: does it still fire?
   scan_001701_regions.py   # metadata scan: which sessions actually have MEC/V1 units
 figures/  results/  cache/
 replication_notebook.py / .ipynb   # narrative walkthrough
