@@ -433,6 +433,21 @@ wheel mice"; under the independent test that is 1/2. The overlapping numbers are
 as the headline only to report the replication *as the original pipeline computes it*;
 the independent column is the statistically defensible one.
 
+**Is 102335 "really" oscillatory by the paper's own method?** Not resolvable on public
+code. The repo's windowed-rotation test is not the paper's classifier — the paper uses
+an *oscillation score* (a population-phase PSD gate plus a τ–d joint-distribution score
+over concatenated sequences). Both top-level functions are in the authors' repo, but
+the pipeline cannot be run end-to-end: leaf dependencies are missing, including two
+that set the detection thresholds, and the released scorer diverges from the Methods
+text (`nperseg = 2048` not 8,192; a **4×** prominence threshold not 9×, commented
+`%Used to be 9`). So whether 102335 is oscillatory is not settled by anything runnable
+here; the repo finding no sequence in it is a **detector difference from the paper's
+method, not evidence against the paper** (the one fully-specified component, the
+population-phase PSD peak, is if anything *cleaner* for 102335 than for 104638). A
+**future direction** is to port the paper's population-phase gate — fully specified in
+the released code — and run it across the panel as a second, paper-native classifier
+alongside the binomial.
+
 ## Where else to look
 
 Candidate regions connected to MEC, and what data exists for each, are tabulated in
