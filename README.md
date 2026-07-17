@@ -433,23 +433,36 @@ wheel mice"; under the independent test that is 1/2. The overlapping numbers are
 as the headline only to report the replication *as the original pipeline computes it*;
 the independent column is the statistically defensible one.
 
-**Is 102335 "really" oscillatory, by the paper's own method? Unadjudicable on public
-code.** The repo's windowed-rotation test is not the paper's classifier. The paper
-uses an **oscillation score** — a whole-session population-phase PSD gate, plus a
-τ–d joint-distribution score over *concatenated sequences* — and by that method it
-classifies both Neuropixels mice as oscillatory. We tried to port it to check 102335
-directly, and could not: the scoring function (`get_oscillation_score_npx_b`) is **not
-in the authors' released code**, and a good-faith reconstruction from the Methods
-fails to validate on the *known-positive* mouse 104638, so it cannot be trusted on
-102335. The one fully-specified component (the population-phase PSD peak) actually
-shows a **cleaner** ultraslow peak for 102335 than for 104638 — if anything favoring
-the paper. So the repo's rotation test finding no sequence in 102335 is a **detector
-difference from the paper's method, not evidence against the paper**; whether 102335
-is genuinely oscillatory is unresolved on public artifacts. This is the same
+**Is 102335 "really" oscillatory, by the paper's own method? Not resolvable by
+running the released code as-is.** The repo's windowed-rotation test is not the
+paper's classifier. The paper uses an **oscillation score** — a whole-session
+population-phase PSD gate (`get_oscillation_score_npx_b.m`), plus a τ–d
+joint-distribution score over *concatenated sequences* (`comp_timelag_prob_3D_npx_b.m`)
+— and by that method classifies both Neuropixels mice as oscillatory. Both top-level
+functions **are** in the authors' repo (`All codes/`), but the pipeline **cannot be
+run end-to-end**: a chain of leaf dependencies is missing — the data loader
+(`get_spike_times_Npx`), `npx_init`, `fire_rate`, `get_sorting_npx`, `doPwelch`,
+`find_peaks_smooth`, `spikes_downsample`, and the Gate-B peak test
+`check_peak_quality_3_npx_b`. Two of those (`find_peaks_smooth`,
+`check_peak_quality_3_npx_b`) encode the actual detection thresholds, so the
+classification is not fully specified by the released code plus the paper alone.
+
+Reading the released `get_oscillation_score_npx_b.m` also shows it **diverges from the
+Methods text**: the population-phase PSD uses `nperseg = 2048` (not the paper's 8,192)
+and the prominence threshold is **4×** the tail, not 9× — with a literal comment
+`%Used to be 9`. So the effective classifier is more lenient than the paper describes.
+
+A good-faith reconstruction from the Methods (before the code was consulted) failed to
+validate on the *known-positive* mouse 104638, so no verdict on 102335 can be drawn
+from it. The one fully-specified component — the population-phase PSD peak — shows a
+**cleaner** ultraslow peak for 102335 than for 104638, if anything favoring the paper.
+So the repo's rotation test finding no sequence in 102335 is a **detector difference
+from the paper's method, not evidence against the paper**; whether 102335 is genuinely
+oscillatory is not settled by anything runnable here. This compounds the
 computational-reproducibility gap flagged in
 [the methods-bug note](#a-methods-bug-worth-flagging-for-anyone-reusing-this): the
-authors' MATLAB cannot be run as published, and now the specific positive-control
-classification cannot be independently recomputed either.
+authors' scripts cannot be run as published (missing leaf functions), and the two
+classifier parameters that *are* recoverable differ from the paper text.
 
 ## Where else to look
 
