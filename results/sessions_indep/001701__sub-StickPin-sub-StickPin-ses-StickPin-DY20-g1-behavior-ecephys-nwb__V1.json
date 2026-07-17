@@ -1,0 +1,9 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-StickPin/sub-StickPin_ses-StickPin-DY20-g1_behavior+ecephys.nwb",
+  "region_select": "V1",
+  "status": "skipped",
+  "n_units": 17,
+  "duration_min": 30.3516277913602,
+  "reason": "too small"
+}

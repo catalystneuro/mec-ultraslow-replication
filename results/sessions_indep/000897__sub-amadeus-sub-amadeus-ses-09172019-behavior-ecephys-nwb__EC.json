@@ -1,0 +1,22 @@
+{
+  "dandiset": "000897",
+  "asset": "sub-amadeus/sub-amadeus_ses-09172019_behavior+ecephys.nwb",
+  "region_select": "EC",
+  "status": "ok",
+  "n_units": 56,
+  "subject": "amadeus",
+  "duration_min": 231.12286,
+  "n_windows": 136,
+  "n_sig_windows": 11,
+  "frac_sig_windows": 0.08088235294117647,
+  "p_session": 0.07961435388497608,
+  "n_windows_indep": 46,
+  "n_sig_windows_indep": 3,
+  "frac_sig_windows_indep": 0.06521739130434782,
+  "p_session_indep": 0.40597530694552664,
+  "median_rot": 0.1382636655948553,
+  "median_rot_null": 0.13183279742765272,
+  "best_rot_z": 4.691123579472899,
+  "sequences": false,
+  "sequences_indep": false
+}

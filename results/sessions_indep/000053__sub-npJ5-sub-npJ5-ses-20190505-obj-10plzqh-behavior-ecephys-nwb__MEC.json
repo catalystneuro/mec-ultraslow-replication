@@ -1,0 +1,22 @@
+{
+  "dandiset": "000053",
+  "asset": "sub-npJ5/sub-npJ5_ses-20190505_obj-10plzqh_behavior+ecephys.nwb",
+  "region_select": "MEC",
+  "status": "ok",
+  "n_units": 354,
+  "subject": "npJ5",
+  "duration_min": 34.0933211111111,
+  "n_windows": 18,
+  "n_sig_windows": 0,
+  "frac_sig_windows": 0.0,
+  "p_session": 1.0,
+  "n_windows_indep": 6,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.18971061093247588,
+  "median_rot_null": 0.5369774919614148,
+  "best_rot_z": -0.21142437274520126,
+  "sequences": false,
+  "sequences_indep": false
+}

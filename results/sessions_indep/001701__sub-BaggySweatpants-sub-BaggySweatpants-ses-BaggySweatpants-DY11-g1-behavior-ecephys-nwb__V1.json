@@ -1,0 +1,22 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-BaggySweatpants/sub-BaggySweatpants_ses-BaggySweatpants-DY11-g1_behavior+ecephys.nwb",
+  "region_select": "V1",
+  "status": "ok",
+  "n_units": 35,
+  "subject": "BaggySweatpants",
+  "duration_min": 17.232391283146104,
+  "n_windows": 8,
+  "n_sig_windows": 1,
+  "frac_sig_windows": 0.125,
+  "p_session": 0.3365795687109375,
+  "n_windows_indep": 3,
+  "n_sig_windows_indep": 1,
+  "frac_sig_windows_indep": 0.3333333333333333,
+  "p_session_indep": 0.142625,
+  "median_rot": 0.1639871382636656,
+  "median_rot_null": 0.13183279742765272,
+  "best_rot_z": 2.886446559935354,
+  "sequences": false,
+  "sequences_indep": false
+}

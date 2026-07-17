@@ -1,0 +1,21 @@
+[1/11] 695762     units=668 pop_peak=0.0057Hz pupil_peak=0.0052 coh=0.355 null=0.090 z=+4.3 p=0.020
+[2/11] 695763     units=294 pop_peak=0.0090Hz pupil_peak=0.0069 coh=0.233 null=0.088 z=+4.2 p=0.015
+[3/11] 695764     units=401 pop_peak=0.0051Hz pupil_peak=0.0084 coh=0.161 null=0.086 z=+3.9 p=0.020
+[4/11] 699321     units=501 pop_peak=0.0066Hz pupil_peak=0.0066 coh=0.193 null=0.088 z=+4.2 p=0.005
+[5/11] 699322     units=115 pop_peak=0.0072Hz pupil_peak=0.0055 coh=0.082 null=0.079 z=+0.4 p=0.368
+[6/11] 702134     units=1077 pop_peak=0.0100Hz pupil_peak=0.0056 coh=0.216 null=0.082 z=+3.9 p=0.010
+[7/11] 714612     units=633 pop_peak=0.0065Hz pupil_peak=0.0051 coh=0.135 null=0.080 z=+2.7 p=0.035
+[8/11] 714615     units=209 pop_peak=0.0113Hz pupil_peak=0.0058 coh=0.323 null=0.087 z=+4.2 p=0.015
+[9/11] 716465     units=190 pop_peak=0.0117Hz pupil_peak=0.0057 coh=0.187 null=0.080 z=+3.0 p=0.005
+[10/11] 717437     units=415 pop_peak=0.0053Hz pupil_peak=0.0294 coh=0.091 null=0.087 z=+0.3 p=0.493
+[11/11] 719667     units=926 pop_peak=0.0072Hz pupil_peak=0.0294 coh=0.073 null=0.072 z=+0.1 p=0.423
+
+-> /Users/rly/Documents/NWB/mec-ultraslow-replication/figures/arousal_control_000690.png
+
+SUMMARY across 11 sessions (MEC population vs PUPIL):
+  |peak freq difference| median   = 0.0033 Hz
+  band coherence  observed median = 0.187
+  band coherence  shift-null mean = 0.086
+  coherence z vs null      median = +3.9
+  sessions with coherence p<0.05  = 8/11
+  |trace corr| median             = 0.18

@@ -1,0 +1,22 @@
+{
+  "dandiset": "000053",
+  "asset": "sub-npI1/sub-npI1_ses-20190413_behavior+ecephys.nwb",
+  "region_select": "MEC",
+  "status": "ok",
+  "n_units": 74,
+  "subject": "npI1",
+  "duration_min": 43.77695166666667,
+  "n_windows": 24,
+  "n_sig_windows": 2,
+  "frac_sig_windows": 0.08333333333333333,
+  "p_session": 0.33918273439119817,
+  "n_windows_indep": 8,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.08681672025723473,
+  "median_rot_null": 0.12540192926045016,
+  "best_rot_z": 2.626664253685613,
+  "sequences": false,
+  "sequences_indep": false
+}

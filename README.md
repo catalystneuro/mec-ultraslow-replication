@@ -1,10 +1,24 @@
 # Replicating minute-scale oscillatory sequences in entorhinal cortex
 
-Replication attempt of **Gonzalo Cogno et al. (2024), _Minute-scale oscillatory
-sequences in medial entorhinal cortex_, Nature 625:338–344**, extended to public
-datasets other than the original.
+Replication of **Gonzalo Cogno et al. (2024), _Minute-scale oscillatory sequences in
+medial entorhinal cortex_, Nature 625:338–344**, plus targeted extensions on public
+data.
 
 Prompted by [dandi/helpdesk#156](https://github.com/dandi/helpdesk/discussions/156).
+
+**This is no longer only a replication.** The replication proper is the positive
+control: the pipeline recovers the effect on the paper's own wheel-in-darkness
+recordings. Everything past that is extension, and the space of possible extensions
+is enormous — one could sweep every brain area and every condition on DANDI looking
+for oscillatory sequences. That is not what this is. The extensions here are
+*targeted*, each aimed at a question the paper itself raises and cannot answer with
+its own data:
+
+| extension | the paper's own words |
+|---|---|
+| navigation, free exploration, salient visual feedback (000053, 001701, 000690, EBRAINS open field) | "It remains an open question whether the ultraslow oscillatory sequences are present across a broader spectrum of behaviours, including sleep and free exploration, and in the presence of salient visual feedback" |
+| task-free rest (000552) | same — the "sleep and free exploration" half |
+| **is the oscillation just arousal?** (000690 pupil) | "consistent with a role for ascending neuromodulatory **arousal**-associated brain-stem circuits in controlling these oscillations" — an alternative the paper names but has no pupil, vascular or arousal measure to test |
 
 ## The claim being tested
 
@@ -40,12 +54,28 @@ the population sequence test discriminates. Our analysis reproduces that logic.
 |---|---|---|---|---|
 | **EBRAINS** [10.25493/SKKX-4W3](https://doi.org/10.25493/SKKX-4W3) | mouse MEC, Neuropixels 2.0 | 404 | 26 min | **positive control** — the original paper's own wheel-in-darkness data |
 | ″ same file, `OpenField` epoch | mouse MEC, *same units* | 438 | 30 min | free foraging — **explicitly NOT analyzed in the paper**; an untested condition, not a validated negative |
+| **EBRAINS two-photon**, mouse 60584 session 7 | mouse MEC, GCaMP6m | 522 | 60 min | **the paper's PRIMARY data** — its own Fig. 1b/2a–e example session |
 | **DANDI 000053** (Mallory/Giocomo) | mouse MEC, Neuropixels | 74–408 | 26–44 min | VR straight track, rewards |
 | **DANDI 001701** (Aery Jones 2026) | mouse MEC dorsal | ~150 | 40 min | X-maze navigation |
 | **DANDI 000897** (Neupane/Fiete/Jazayeri) | **macaque** EC | 59 | 318 min | mental navigation — cross-species |
+| **DANDI 000690** (Allen OpenScope) | mouse **MEC + PaS + V1**, simultaneous | up to 726 MEC | 120–135 min | **the paper's Fig. 5 design within a session**; passive viewing, no darkness |
+| **DANDI 000552** (Huszár et al.) | mouse **CA1** | 102–221 | 39–148 min | **task-free rest** — region control in the one condition the archive can supply |
 
-Screened and rejected: **000582** (only 3–5 units/session), **000638** (190-min
-sessions but too few MEC units), **000943** (raw ecephys only — no spike sorting).
+### Screened and rejected
+
+Full catalogue in **[SCREENING.md](SCREENING.md)** — every entorhinal or long-rest
+candidate on DANDI, from a scan of all 875 dandisets, with the quantitative reason
+each failed. Two structural findings drive most of it:
+
+- **The 17.6-minute floor.** The paper's Welch window is 17.6 min (8,192 × 129 ms),
+  so one analysis window needs that much *continuous* recording in one condition.
+  It is what disqualifies IBL (its rest block is capped at exactly 10.0 min by
+  protocol), 000053 (8.4 min of darkness) and 000059 (12.25 min of septal cooling).
+- **The condition is never in the metadata.** Of 875 dandisets, 3 mention darkness
+  (none relevant) and zero mention ultraslow/infraslow oscillation. Rest and dark
+  blocks are found only by streaming files — and the derived data usually stops at
+  the task boundary anyway (001634 has ten ideal 17–33 min rest epochs and sorted
+  units in *none* of them).
 
 The EBRAINS **wheel** epoch is the methodological keystone: a detector that
 cannot fire there cannot be trusted to report a null anywhere else.
@@ -110,17 +140,26 @@ population level, with two design choices:
   score each against the shift null, and take a binomial test on the count of
   significant windows (the "oscillation score"). This is the paper's own
   fraction-of-session-oscillating logic, with a per-window null attached, and it
-  fires on **both** original Neuropixels mice. The detector is calibrated to the
-  strong wheel session and deliberately not tuned to force borderline cases.
+  fires on both original Neuropixels mice.
+
+> **Note.** The windowed binomial as originally parameterized (300 s window, 100 s
+> step) counts **overlapping** windows and is anti-conservative. All numbers in the
+> results and interpretation below are the original overlapping values, marked
+> **[†](#the-overlapping-window-caveat)**. They inflate the positives — the 2/2
+> positive control is really 1/2 — but change **no conclusion**, because the nulls
+> are unaffected. See **[The overlapping-window caveat](#the-overlapping-window-caveat)**
+> for why, and for the corrected numbers side by side.
 
 ## Results (every session, every dataset)
 
 The paper's reported quantity is the **fraction of sessions with periodic
 sequences** (Fig. 5g: MEC 15/27, PaS 0/25, VIS 0/19), because the effect is
-strongly session-variable. We compute the same, using the windowed sequence test
-(`figures/SUMMARY_all_sessions.png`):
+strongly session-variable. We compute the same with the windowed sequence test
+(`figures/SUMMARY_all_sessions.png`). Numbers are the original overlapping-window
+values, marked **[†](#the-overlapping-window-caveat)**; the corrected values are in
+[that section](#the-overlapping-window-caveat).
 
-| group | condition | sessions with sequences |
+| group | condition | sessions with sequences **[†](#the-overlapping-window-caveat)** |
 |---|---|---|
 | **EBRAINS wheel / darkness** | positive control | **2/2 = 100%** |
 | EBRAINS open field (same units) | untested in paper | 0/2 |
@@ -128,12 +167,21 @@ strongly session-variable. We compute the same, using the windowed sequence test
 | **DANDI 001701** mouse MEC | X-maze | **3/114 = 3%** |
 | DANDI 001701 visual cortex | region control | 9/110 = 8% *(confound)* |
 | DANDI 000897 macaque EC | mental navigation | 8/15 = 53% *(confound)* |
+| **DANDI 000690** mouse MEC | passive viewing | 3/11 = 27% |
+| DANDI 000690 visual cortex | *simultaneous* control | 1/11 = 9% |
+| DANDI 000690 parasubiculum | *simultaneous* control | 1/3 |
+| **DANDI 000552** mouse CA1 | task-free rest | **0/6 = 0%** |
 
-**The pipeline reproduces the original effect.** On the paper's own
-wheel-in-darkness data it recovers ultraslow rhythmicity in 64% of MEC cells
-(paper: ~91% by a different criterion), a median period of 39 s, and coherent
-population sequences in **both** Neuropixels mice (104638 p≈1e-6; 102335 p=0.025),
-while the two open-field epochs from the same units are negative.
+(The **two-photon** primary-data result is reported separately in
+"[The paper's primary data](#the-papers-primary-data)".)
+
+**The pipeline reproduces the original effect.** On the paper's own wheel-in-darkness
+data it recovers ultraslow rhythmicity in 64% of MEC cells (paper: ~91% by a
+different criterion), a median period of 39 s, and coherent population sequences in
+**both** Neuropixels mice (104638 p≈1e-6; 102335 p=0.025), while the two open-field
+epochs from the same units are negative. (Under the corrected test the positive
+control is 1/2 — 104638 survives, 102335 does not; see
+[the caveat](#the-overlapping-window-caveat).)
 
 **We do not replicate minute-scale oscillatory *sequences* in mouse MEC during
 navigation.** Across **134 mouse MEC navigation sessions** (0/20 VR track + 3/114
@@ -166,28 +214,300 @@ each nailed by a dedicated control:
   whole band (|corr| 0.30–0.53). It is task-engagement block structure over a
   multi-hour session, not an intrinsic rhythm.
 
+### CA1 at rest: single-cell rhythmicity is meaningless
+
+`11_ca1_rest_000552.py`, `figures/ca1_rest_000552.png`. **0/6 sessions with
+sequences** (102–221 units, 39–148 min of continuous task-free awake rest; median
+oscillation score 0.00, Wilcoxon vs 0.05 chance p=0.031).
+
+The null itself is *expected* — the paper's contrast is that MEC carries a
+low-dimensional code with ~94% of cells locked to the sequence whereas hippocampal
+sequences involve ~5% of the network. The **dissociation** is the point, and it is
+more extreme here than anywhere else in the panel:
+
+| | single-cell rhythmicity | sessions with sequences |
+|---|---|---|
+| CA1, task-free rest | **83%** (highest in the panel) | **0/6** |
+| ORIGINAL wheel / darkness | 53% | 2/2 **[†](#the-overlapping-window-caveat)** |
+
+CA1 at rest is *more* ultraslow-rhythmic than the paper's own data where the effect
+is known present, at a median peak of 0.0066 Hz — inside the paper's reported
+0.006–0.008 Hz band — with no population sequences at all. At its best 500 s window
+it reaches rotation 0.22, against 0.75 for the wheel control. A pipeline that stopped
+at single-cell spectra would rank CA1-at-rest as a *stronger* replication than the
+original data.
+
+#### Not a power artifact — tested directly
+
+`13_power_analysis.py`, `figures/power_analysis.png`. CA1 rest has 1.9× fewer units
+than the wheel control (215 vs 404) and 2.5× lower firing rates (1.25 vs 3.18 Hz), so
+"too few / too sparse cells" was a live alternative. We degraded the positive control
+to CA1's conditions and re-ran the identical test:
+
+| positive control, degraded | sequences detected |
+|---|---|
+| n = 50 units (a quarter of CA1's) | **5/5** |
+| **n = 215 AND thinned to 1.25 Hz (fully CA1-matched)** | **5/5 in both mice** |
+| *CA1 rest, actual* | *0/6* |
+
+The effect survives every handicap CA1 imposes, and survives even at n=50 —
+unsurprising given ~94% of MEC cells participate; a population-wide effect does not
+need a large sample. Insufficient power is not an available explanation. Region,
+species and state remain uncontrolled.
+
+### MEC vs its own control regions, recorded simultaneously (000690)
+
+`14_openscope_000690.py`, unit-matched within session. **MEC 3/11 (27%), V1 1/11
+(9%), PaS 1/3 [†](#the-overlapping-window-caveat)**.
+
+This is the only dataset that runs the paper's Fig. 5 contrast *within* a session, so
+the stimulus is common to all regions by construction and cannot manufacture a
+MEC-vs-V1 difference. But **the contrast does not reach significance** (Fisher exact
+MEC vs V1, p=0.59 — true on either window scheme), and it does not survive inspection
+of the individual sessions:
+
+- **714615** is the one clean MEC-specific positive (survives the window correction:
+  9/26 independent windows, p<1e-4, rotation 0.428 vs null 0.299).
+- **702134** is positive in **MEC, V1 and PaS at once** — a global signal, not an MEC
+  one. It is also the session with the strongest MEC–pupil coherence (z=+3.9), so
+  this is most likely the arousal signal appearing in every region simultaneously.
+- **695764** was a subsampling artifact: significant at the 250-unit subsample, gone
+  (p=0.69) with all 401 units.
+
+So **one** MEC session shows a defensible region-specific sequence, versus one for
+V1 — the within-session contrast this dataset was added to provide does not hold.
+MEC does clear the 5% chance level across sessions (binomial p=0.015) where V1 does
+not (p=0.43), which is real but much weaker than "MEC beats its simultaneous control".
+
+The rest of the panel still orders wheel/darkness → passive viewing → navigation,
+consistent with the authors' speculation that "sequences reset in the presence of
+strong landmarks or sensory stimulation". It is suggestive, not established: the
+groups differ in lab, rig, species-strain and sorting as well as condition.
+
+### Is the oscillation just arousal? (000690 pupil) — the paper's orphaned alternative
+
+`15_arousal_control.py`, `figures/arousal_control_000690.png`. **Yes, substantially.**
+
+The paper names ascending **arousal** circuits as the likely driver of the
+single-cell oscillation and cites infraslow pupil oscillation and vascular confounds
+— but has no pupil, vascular or arousal measure anywhere, and 0.006–0.008 Hz sits in
+the arousal/vasomotion range. 000690 carries EyeTracking alongside the archive's best
+MEC coverage, so the control is runnable.
+
+Coupling is tested as band coherence between the MEC population and pupil area,
+against an independent **circular shift** of the pupil trace — the same null as the
+sequence test, preserving each signal's own spectrum and destroying only their
+relative timing.
+
+| | median across 11 sessions |
+|---|---|
+| MEC–pupil band coherence, observed | **0.187** |
+| same, circular-shift null | 0.086 |
+| coherence z vs null | **+3.9** |
+| sessions significant at p<0.05 | **8/11** |
+| \|peak frequency difference\| | 0.0033 Hz |
+
+MEC population peaks land at 0.005–0.012 Hz — squarely in the paper's own
+0.006–0.008 Hz band — and are coherent with pupil at ~2.2× the shift null in 8 of 11
+sessions. **The ultraslow oscillation in MEC substantially tracks arousal**, which is
+what the authors themselves proposed and could not test.
+
+This does **not** touch the sequence claim. It supports the paper's own two-part
+model: the oscillation is ascending and global (and now measurably arousal-coupled),
+while sequence formation may still be MEC-specific. It does mean that any single-cell
+ultraslow result — in MEC or anywhere else — should be read as an arousal measurement
+until a population sequence test says otherwise.
+
+A trap worth recording: correlating the two **log spectra** gives r≈0.94 and is
+meaningless, because both signals are 1/f-like and any two such spectra agree in log
+space whether or not they share an oscillation. That is the same failure as "band
+power cannot detect the effect" above. Only the shift-null comparison is informative.
+
 ### Interpretation
 
-Minute-scale oscillatory **sequences** reproduce on the original wheel data and
-are **not detectable in mouse MEC during navigation** (0/20 + 3/114 sessions),
-consistent with the authors' own speculation that "sequences reset in the presence
-of strong landmarks or sensory stimulation". This is a partial answer to the open
-question they pose. The apparent positives in mouse V1 and macaque EC are
-behavioural/task confounds, not evidence for the phenomenon.
+**The replication holds, on both modalities.** Minute-scale oscillatory sequences
+reproduce on the paper's own wheel-in-darkness Neuropixels data and — the part that
+actually carries the paper's claims — on its **primary two-photon data**: session
+60584/7 gives an oscillation score of 0.21 (p=0.0013 [†](#the-overlapping-window-caveat))
+and a near-circular PC1–PC2 ring (ratio 1.15). Both survive the window correction
+(104638 and the imaging session pass; only the paper's weaker mouse 102335 does not,
+dropping the positive control to 1/2 — see [the caveat](#the-overlapping-window-caveat)).
+The single-cell half of the imaging session reproduces independently at the reported
+~0.0066 Hz
+([rly/replicate-gonzalo-cogno-2023](https://github.com/rly/replicate-gonzalo-cogno-2023)).
+A detector was validated on known-positive data before any null was trusted anywhere.
 
-What this does **not** license is the claim that darkness is *necessary* — the
-paper never tested another condition, so necessity is unestablished, and a null
-cannot separate "sensory drive abolishes the sequences" from "insufficient power".
-But the multi-session scale substantially strengthens the null: 134 MEC navigation
-sessions, with a validated detector that fires on both original wheel sessions and
-is deliberately *not* tuned to force borderline cases.
+**Sequences are not detectable in mouse MEC during navigation** (0/20 VR track +
+3/114 X-maze [†](#the-overlapping-window-caveat)), and only weakly under passive
+viewing (3/11), consistent with the authors' speculation that "sequences reset in the
+presence of strong landmarks or sensory stimulation". Across the panel the rate orders
+wheel/darkness → passive viewing → navigation, which is suggestive but confounded by
+lab, rig and sorting. (These nulls are unchanged by the window correction.)
+
+**Single-cell ultraslow rhythmicity is not evidence for the claim, and is now
+partly explained.** It is high everywhere (~50–90% in every group, highest of all in
+CA1 at rest, which has zero sequences), and in MEC it is **coherent with pupil-indexed
+arousal in 8/11 sessions** at ~2.2× a circular-shift null. That is the paper's own
+proposed mechanism for the oscillation, tested for the first time. Any single-cell
+ultraslow result should be read as an arousal measurement until a population sequence
+test says otherwise.
+
+**What survives as the paper's distinctive claim** is therefore the narrower and more
+interesting one: not that MEC cells oscillate slowly — that appears to be arousal,
+and it is everywhere — but that MEC alone organizes those oscillations into periodic
+population *sequences*. Nothing here contradicts that; it reproduces on the primary
+imaging data and on one Neuropixels control. But the within-session MEC-vs-V1 contrast
+in 000690 does **not** confirm region specificity (3/11 vs 1/11, not significant; the
+one all-region-positive session tracks pupil), so MEC-specificity rests on the
+paper's own data plus the region *nulls* here, not on a positive out-of-sample
+discrimination.
+
+**What this does not license**: that darkness is *necessary*. The paper never ran
+another condition, so necessity is unestablished, and a null cannot separate "sensory
+drive abolishes the sequences" from "insufficient power" — though for CA1, power is
+now ruled out directly.
 
 Caveats: the detector is calibrated to the stronger wheel session (104638); weaker
-intermittent sequences of the kind the paper notes in mouse 102335 could be
-missed. The macaque has few units per session (25–64) and a trial-structured task.
+intermittent sequences of the kind the paper notes in mouse 102335 could be missed.
+The macaque has few units per session (25–64) and a trial-structured task. 000690
+session 702134 is positive in all three regions at once, which is a global signal, not
+an MEC-specific one.
 
-Depositing the EBRAINS wheel data on DANDI would be valuable — it is the only
-public recording in the condition where the effect is known to exist.
+Depositing the EBRAINS wheel data on DANDI would be valuable — it is the only public
+recording in the condition where the effect is known to exist.
+
+## The overlapping-window caveat
+
+Every windowed `sequences: yes/no` call in this report (the **[†](#the-overlapping-window-caveat)**
+marks) comes from `binomtest(n_significant_windows, n_windows, 0.05)` over a 300 s
+window sliding in **100 s steps**. Adjacent windows therefore share **two-thirds of
+their samples**, while the binomial assumes they are **independent**. So it counts
+~3× more evidence than exists and is **anti-conservative** — it manufactures
+significance.
+
+**This is the repo's parameterization, not the paper's.** The paper does use a
+binomial (Extended Data Fig. 8, the travelling-wave analysis), but only over
+genuinely **independent** units — 15 distinct sessions, or non-overlapping spatial
+bins (e.g. "1/15, probability = 0.37, binomial distribution"; "1/8, probability =
+0.28"). Independence is the assumption every binomial in the paper satisfies and the
+overlapping-window version violates. And the paper's own session-level call is not a
+windowed binomial at all: its **oscillation score** is a single whole-session Welch
+PSD of the population phase with a peak-prominence test (peak > 9× the tail mean and
+> 9× the pre-peak minimum), and its **sequence score** is thresholded at the 99th
+percentile of a per-session shuffle. The sliding-window binomial is this repo's
+approximation of that, and the overlap is where it goes wrong.
+
+`windowed_sequence_test` now also returns the statistic on **non-overlapping**
+windows (every 3rd window of the same grid, so free to compute), and
+`17_window_independence.py` re-runs the whole panel both ways
+(`figures/window_independence.png`). The correction is **asymmetric**, which is why
+no conclusion moves:
+
+| group | overlapping (reported above) | **independent (corrected)** |
+|---|---|---|
+| EBRAINS wheel (positive control) | 2/2 = 100% | **1/2 = 50%** |
+| EBRAINS open field | 0/2 | 0/2 |
+| two-photon primary data | p=0.0013 (7/34) | **p=0.0022 (4/12), still YES** |
+| 000053 MEC (VR track) | 0/20 | **0/20** |
+| 001701 MEC (X-maze) | 3/114 = 3% | **2/114 = 2%** |
+| 001701 V1 | 9/110 = 8% | **6/110 = 5%** |
+| 000897 macaque EC | 8/15 = 53% | **6/15 = 40%** |
+| 000690 MEC (passive) | 3/11 = 27% | **2/11 = 18%** |
+| 000690 V1 | 1/11 = 9% | **1/11 = 9%** |
+| 000552 CA1 (rest) | 0/6 | **0/6** |
+
+- **Every null is unchanged** — a liberal test that found nothing finds nothing when
+  made stricter. The CA1 and navigation stories, which are carried by nulls, do not
+  move.
+- **Every positive weakens** in proportion to how much it leaned on overlap.
+- **The positive control drops to 1/2.** Mouse 102335 goes from 3/13 windows
+  (p=0.025) to 1/5 (p=0.23) — and its median observed window rotation (0.498) is
+  *below* its median null (0.588), so that "positive" was pure overlap. Mouse 104638
+  survives cleanly (3/5, p=0.0012), as does the two-photon primary session. So the
+  detector is still validated on known-positive data, on the *stronger* of the paper's
+  two Neuropixels mice plus its own imaging session — just not on 102335, the subtle,
+  subset-dependent one the paper itself flags.
+
+Note that `09_validate_windowed.py` still states the detector "fires on both original
+wheel mice"; under the independent test that is 1/2. The overlapping numbers are kept
+as the headline only to report the replication *as the original pipeline computes it*;
+the independent column is the statistically defensible one.
+
+## Where else to look
+
+Candidate regions connected to MEC, and what data exists for each, are tabulated in
+[SCREENING.md](SCREENING.md#connected-regions-candidates-and-their-data). The short
+version: **lateral entorhinal cortex** is the strongest untested candidate — adjacent,
+reciprocally connected, invoked by the paper itself for its slow drift, and never
+recorded in the paper — and the only LEC dandiset is empty. **Medial septum** is the
+way to ask whether the rhythm is imposed rather than intrinsic; all three septum
+datasets fail as deposited. Neither gap is fixable by analysis.
+
+### The paper's primary data
+
+The paper's headline numbers — 91% of cells oscillatory, ~94% phase-locked, 44% at
+0.006–0.008 Hz, the ring manifold, 15/27 oscillatory sessions — are **not** from the
+Neuropixels recordings used as the positive control here. They are from **two-photon
+imaging of 6,231 cells across 15 sessions**. That is the actual claim.
+
+**The single-cell half was already replicated**, independently, in
+[rly/replicate-gonzalo-cogno-2023](https://github.com/rly/replicate-gonzalo-cogno-2023):
+it goes to the EBRAINS two-photon deposit (`data/calcium/60584/2019-01-29/MUnit_0`,
+the paper's own Fig. 1 example session), applies the paper's preprocessing, and
+reproduces **Figure 1** — the same vertical banding in the stacked autocorrelations,
+example cells peaking at ~0.0066 Hz with harmonics, matching the reported value.
+
+**The sequence half is tested here** (`16_imaging_sequences.py`), which is the part
+that matters: single-cell rhythmicity is exactly what this repo shows is non-specific.
+Result on the same session, 522 cells, 60 min, using the paper's own activity matrix:
+
+| | |
+|---|---|
+| significant windows | **7/34 [†](#the-overlapping-window-caveat)** |
+| oscillation score | **0.21** |
+| p_session | **0.0013** |
+| **sequences** | **YES** |
+| ring geometry (PC1/PC2 ratio) | **1.15** (a ring is ~1.0) |
+
+For reference the wheel Neuropixels sessions score 0.54 (p=1e-6) and 0.23 (p=0.025),
+so the imaging session sits alongside the weaker mouse. And unlike that weaker mouse
+(102335, which fails the [window correction](#the-overlapping-window-caveat)), **the
+imaging session survives it** — 4/12 non-overlapping windows, p=0.0022 — so this
+result does not depend on the flaw. The PCA-sorted raster reproduces Fig. 2b and the
+PC1–PC2 manifold reproduces the Fig. 2c ring at a near-circular 1.15 aspect
+(`figures/imaging_sequences.png`).
+
+So the paper's distinctive claim now stands on its primary data, not only on two
+Neuropixels mice.
+
+#### A third statistical trap, and this one nearly produced a false negative
+
+Applying the ephys pipeline's convention to the imaging data — Gaussian σ = 5 s, then
+z-score — returns **0/34 significant windows, p=1, "no sequences"** on data where the
+effect is present. The reason is instructive: deconvolved calcium is already
+temporally smooth, so smoothing again oversmooths, and the PC1/PC2 trajectory then
+advances consistently *for the circular-shift surrogates too*. Observed rotation is a
+high-looking **0.853 — against a null of ~0.83 (z=+1.2)**. The statistic saturates and
+loses all discriminative power. The σ = 5 s kernel exists in the ephys path to mimic
+calcium dynamics that imaging data already has; applying it to calcium double-counts
+it, which is why the paper binarizes imaging data instead.
+
+Smoothing is right for the manifold *picture* (the paper smooths for Fig. 2c) and
+wrong for the *statistic*. Same family as the two traps above: a confident, clean,
+completely wrong answer, caught only because the effect was known to be present.
+
+#### Two reproducibility findings from the imaging work
+
+- **The authors' MATLAB cannot be run as published.** Both `analysis_npx_b.m` and
+  `Autocorrelations_PSDs_examples_b.m` call `npx_init`, which is not in the
+  repository, and paths are hardcoded to a lab drive (`W:\npxwaves\MEC\`). So
+  *computational* reproducibility — same code, same data, same numbers — is still
+  blocked, independent of the methodological reproduction here.
+- **Cell-count discrepancies.** The paper reports 469 good units for mouse 104638; the
+  deposited file yields 487. It reports 484 cells for imaging session 60584/7; `iscell`
+  gives 522, and the stated SNR>4 criterion is non-binding (reimplemented on
+  F − 0.7·Fneu it gives a median SNR of 21.5, with no cell falling in 0 < SNR ≤ 4).
+  Neither gap is material — ~94% of cells participate — but neither reproduces exactly.
 
 ### A methods bug worth flagging for anyone reusing this
 
@@ -210,6 +530,20 @@ python3 scripts/07_run_all_sessions.py
 
 # aggregate to the fraction-of-sessions figure the paper reports
 python3 scripts/08_session_summary.py
+
+# CA1 during long task-free rest (000552) + its dissociation figure
+python3 scripts/11_ca1_rest_000552.py
+python3 scripts/12_ca1_rest_figure.py
+
+# is the CA1 null just insufficient power? (subsample + rate-match the control)
+python3 scripts/13_power_analysis.py
+
+# MEC vs its own control regions, simultaneous (000690); then the arousal control
+python3 scripts/14_openscope_000690.py
+python3 scripts/15_arousal_control.py
+
+# the sequence test on the paper's primary two-photon data (downloads from EBRAINS)
+python3 scripts/16_imaging_sequences.py
 ```
 
 All data is streamed from DANDI and EBRAINS on demand (remfile + a local disk
@@ -232,9 +566,17 @@ scripts/
   06_summary_figure.py     # single-session cross-dataset summary
   07_run_all_sessions.py   # RESUMABLE run over every session x region -> results/sessions/
   08_session_summary.py    # fraction of sessions with sequences (paper's quantity)
-  09_validate_windowed.py  # windowed detector validated on both original wheel mice
+  09_validate_windowed.py  # windowed detector validated on the original wheel mice
+  17_window_independence.py# re-run the panel with non-overlapping windows (the correction)
   10_macaque_control.py    # macaque EC: is the 'oscillation' task-engagement structure?
+  11_ca1_rest_000552.py    # CA1 during long TASK-FREE rest (the condition, minus the region)
+  12_ca1_rest_figure.py    # the rhythmicity-vs-sequences dissociation + rasters
+  13_power_analysis.py     # degrade the positive control to CA1's n and rate: does it still fire?
+  14_openscope_000690.py   # MEC vs PaS vs V1 recorded simultaneously (unit-matched)
+  15_arousal_control.py    # is the ultraslow oscillation just pupil-indexed arousal?
+  16_imaging_sequences.py  # the sequence test on the paper's PRIMARY two-photon data
   scan_001701_regions.py   # metadata scan: which sessions actually have MEC/V1 units
 figures/  results/  cache/
+SCREENING.md                       # every dandiset screened, and why it was rejected
 replication_notebook.py / .ipynb   # narrative walkthrough
 ```

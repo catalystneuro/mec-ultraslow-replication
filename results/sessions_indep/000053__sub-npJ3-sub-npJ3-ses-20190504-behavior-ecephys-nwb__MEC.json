@@ -1,0 +1,22 @@
+{
+  "dandiset": "000053",
+  "asset": "sub-npJ3/sub-npJ3_ses-20190504_behavior+ecephys.nwb",
+  "region_select": "MEC",
+  "status": "ok",
+  "n_units": 187,
+  "subject": "npJ3",
+  "duration_min": 43.962313333333334,
+  "n_windows": 24,
+  "n_sig_windows": 2,
+  "frac_sig_windows": 0.08333333333333333,
+  "p_session": 0.33918273439119817,
+  "n_windows_indep": 8,
+  "n_sig_windows_indep": 1,
+  "frac_sig_windows_indep": 0.125,
+  "p_session_indep": 0.3365795687109375,
+  "median_rot": 0.08360128617363344,
+  "median_rot_null": 0.3183279742765273,
+  "best_rot_z": 1.8135281620008077,
+  "sequences": false,
+  "sequences_indep": false
+}

@@ -1,0 +1,26 @@
+{
+  "paper's binary matrix": {
+    "pc12_var": 0.038176533285321876,
+    "pc12_z": 161.73268522038592,
+    "rotation": 0.11040828062104657,
+    "rot_z": 6.785124769787659,
+    "n_windows": 34,
+    "n_sig": 7,
+    "oscillation_score": 0.20588235294117646,
+    "p_session": 0.001271680673838807,
+    "sequences": true
+  },
+  "ephys smoothing convention (INVALID here - oversmooths)": {
+    "pc12_var": 0.16192599899017227,
+    "pc12_z": 190.8423425775533,
+    "rotation": 0.8533640023001725,
+    "rot_z": 1.2422078023449379,
+    "n_windows": 34,
+    "n_sig": 0,
+    "oscillation_score": 0.0,
+    "p_session": 1.0,
+    "sequences": false
+  },
+  "n_cells": 522,
+  "duration_min": 59.9504577275175
+}

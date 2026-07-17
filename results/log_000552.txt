@@ -1,0 +1,9 @@
+##########################################################################################
+# 000552: 6 task-free Awake rest sessions
+##########################################################################################
+[1/6] 000552__sub-e15-13f1-sub-e15-13f1-ses-e15-13f1-220119-be units=215  86.1min rhythmic= 90% rot_z= -0.7 seq=no   [81s]
+[2/6] 000552__sub-e14-2m2-sub-e14-2m2-ses-e14-2m2-201013-behav units=148 147.8min rhythmic= 90% rot_z= -0.6 seq=no   [84s]
+[3/6] 000552__sub-e15-13f1-sub-e15-13f1-ses-e15-13f1-220117-be units=221  39.5min rhythmic= 79% rot_z= +1.0 seq=no   [47s]
+[4/6] 000552__sub-e15-13f1-sub-e15-13f1-ses-e15-13f1-220118-be units=201  40.1min rhythmic= 76% rot_z= -3.0 seq=no   [43s]
+[5/6] 000552__sub-e16-3m1-sub-e16-3m1-ses-e16-3m1-210111-behav units=126  56.6min rhythmic= 78% rot_z= -1.2 seq=no   [29s]
+[6/6] 000552__sub-e16-3m1-sub-e16-3m1-ses-e16-3m1-210201-behav units=102  65.3min rhythmic= 85% rot_z= +1.8 seq=no   [26s]

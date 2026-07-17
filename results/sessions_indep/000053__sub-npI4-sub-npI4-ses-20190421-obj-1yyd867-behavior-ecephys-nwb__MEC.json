@@ -1,0 +1,22 @@
+{
+  "dandiset": "000053",
+  "asset": "sub-npI4/sub-npI4_ses-20190421_obj-1yyd867_behavior+ecephys.nwb",
+  "region_select": "MEC",
+  "status": "ok",
+  "n_units": 221,
+  "subject": "npI4",
+  "duration_min": 51.67359166666667,
+  "n_windows": 29,
+  "n_sig_windows": 0,
+  "frac_sig_windows": 0.0,
+  "p_session": 1.0,
+  "n_windows_indep": 10,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.1832797427652733,
+  "median_rot_null": 0.6141479099678456,
+  "best_rot_z": -1.5562865179189491,
+  "sequences": false,
+  "sequences_indep": false
+}

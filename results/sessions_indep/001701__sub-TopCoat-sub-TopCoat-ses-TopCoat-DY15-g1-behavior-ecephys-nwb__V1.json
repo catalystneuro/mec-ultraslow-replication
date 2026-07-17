@@ -1,0 +1,22 @@
+{
+  "dandiset": "001701",
+  "asset": "sub-TopCoat/sub-TopCoat_ses-TopCoat-DY15-g1_behavior+ecephys.nwb",
+  "region_select": "V1",
+  "status": "ok",
+  "n_units": 93,
+  "subject": "TopCoat",
+  "duration_min": 25.254473884142524,
+  "n_windows": 13,
+  "n_sig_windows": 2,
+  "frac_sig_windows": 0.15384615384615385,
+  "p_session": 0.13542385973978077,
+  "n_windows_indep": 5,
+  "n_sig_windows_indep": 1,
+  "frac_sig_windows_indep": 0.2,
+  "p_session_indep": 0.2262190625,
+  "median_rot": 0.17041800643086816,
+  "median_rot_null": 0.1639871382636656,
+  "best_rot_z": 3.2832508210672318,
+  "sequences": false,
+  "sequences_indep": false
+}

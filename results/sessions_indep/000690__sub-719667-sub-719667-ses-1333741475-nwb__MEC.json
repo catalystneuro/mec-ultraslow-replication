@@ -1,0 +1,22 @@
+{
+  "dandiset": "000690",
+  "asset": "sub-719667/sub-719667_ses-1333741475.nwb",
+  "region_select": "MEC",
+  "status": "ok",
+  "n_units": 81,
+  "subject": "719667",
+  "duration_min": 135.06946838508563,
+  "n_windows": 79,
+  "n_sig_windows": 6,
+  "frac_sig_windows": 0.0759493670886076,
+  "p_session": 0.2028635662077213,
+  "n_windows_indep": 27,
+  "n_sig_windows_indep": 3,
+  "frac_sig_windows_indep": 0.1111111111111111,
+  "p_session_indep": 0.15049443231438295,
+  "median_rot": 0.20257234726688103,
+  "median_rot_null": 0.21543408360128619,
+  "best_rot_z": 2.6209470086053037,
+  "sequences": false,
+  "sequences_indep": false
+}

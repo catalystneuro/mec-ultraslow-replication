@@ -1,0 +1,4 @@
+EBRAINS 104638 wheel (POS CTRL)    n= 404 | overlap  7/13  p=0.0000 SEQ | INDEP  3/5  p=0.0012 SEQ | rot 0.479 vs null 0.273
+EBRAINS 102335 wheel (POS CTRL)    n= 273 | overlap  3/13  p=0.0245 SEQ | INDEP  1/5  p=0.2262 no  | rot 0.498 vs null 0.588
+000690 714615 MEC                  n= 209 | overlap 23/77  p=0.0000 SEQ | INDEP  9/26 p=0.0000 SEQ | rot 0.428 vs null 0.299
+000690 695764 MEC                  n= 401 | overlap  3/70  p=0.6863 no  | INDEP  0/24 p=1.0000 no  | rot 0.222 vs null 0.505

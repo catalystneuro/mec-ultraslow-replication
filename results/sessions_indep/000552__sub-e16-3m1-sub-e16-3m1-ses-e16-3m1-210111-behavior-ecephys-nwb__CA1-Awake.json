@@ -1,0 +1,22 @@
+{
+  "dandiset": "000552",
+  "asset": "sub-e16-3m1/sub-e16-3m1_ses-e16-3m1-210111_behavior+ecephys.nwb",
+  "region_select": "CA1-Awake",
+  "status": "ok",
+  "n_units": 126,
+  "subject": "e16_3m1",
+  "duration_min": 56.63333333333333,
+  "n_windows": 32,
+  "n_sig_windows": 0,
+  "frac_sig_windows": 0.0,
+  "p_session": 1.0,
+  "n_windows_indep": 11,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.135048231511254,
+  "median_rot_null": 0.4983922829581994,
+  "best_rot_z": -1.1866554126111617,
+  "sequences": false,
+  "sequences_indep": false
+}

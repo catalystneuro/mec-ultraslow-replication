@@ -1,0 +1,22 @@
+{
+  "dandiset": "ebrains",
+  "asset": "102335/OpenField",
+  "region_select": "OpenField",
+  "status": "ok",
+  "n_units": 298,
+  "subject": "102335",
+  "duration_min": 25.266666666666666,
+  "n_windows": 13,
+  "n_sig_windows": 1,
+  "frac_sig_windows": 0.07692307692307693,
+  "p_session": 0.4866579167204949,
+  "n_windows_indep": 5,
+  "n_sig_windows_indep": 0,
+  "frac_sig_windows_indep": 0.0,
+  "p_session_indep": 1.0,
+  "median_rot": 0.20257234726688103,
+  "median_rot_null": 0.21543408360128619,
+  "best_rot_z": 3.545979735886847,
+  "sequences": false,
+  "sequences_indep": false
+}
